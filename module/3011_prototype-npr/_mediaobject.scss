@@ -1,0 +1,141 @@
+/* SETUP | MODULE | 3011_PROTOTYPE-NPR | MEDIAOBJECT - 2019-06-25 */
+// SETUP | MODULE | 3011_SETUP | MEDIAOBJECT - 2019-06-21 */
+
+// -------------------------------------
+// EXTEND
+
+	%mediaobject-flex {
+		display: flex;
+	}
+	%mediaobject-flex-cancel {
+		display: block;
+	}
+
+	// FLEX-DIRECTION
+	%mediaobject-flex-left2right {
+		flex-direction: row;
+	}
+	%mediaobject-flex-right2left {
+		flex-direction: row-reverse;
+	}
+	%mediaobject-flex-top2bottom {
+		flex-direction: column;
+	}
+	%mediaobject-flex-bottom2top {
+		flex-direction: column-reverse;
+	}
+
+	// FLEX-ALIGN
+	%mediaobject-align-left2right {
+		align-items: flex-start;
+	}
+
+	// ITEM-FIGURE
+	%mediaobject-itemfigure {
+		//background-color: red;
+	}
+
+	%mediaobject-itemfigure-left {
+		margin-right: 1rem;
+		margin-left: 0;
+	}
+	%mediaobject-itemfigure-right {
+		margin-right: 0;
+		margin-left: 1rem;
+	}
+	%mediaobject-itemfigure-vertical {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	// ITEM-INFO
+	%mediaobject-iteminfo {
+		//background-color: yellow;
+		flex: 1;
+	}
+	%mediaobject-iteminfo--archivegrid {
+		background-color: #000;
+		padding: 0.5rem 0.5rem 0.5rem 1rem;
+	}
+	%mediaobject-iteminfo--archivegrid-video {}
+	%mediaobject-iteminfo--archivegrid-podcast {}
+
+
+
+// -------------------------------------
+// SELECTORS
+
+	// MODULE-MEDIAOBJECT
+	.module-mediaobject {
+		@extend %mediaobject-flex !optional;
+		@extend %mediaobject-align-left2right !optional;
+	}
+		// + REVERSE
+		.module-mediaobject.module-reverse {
+			@extend %mediaobject-flex-right2left !optional;
+		}
+		// + VERTICAL
+		.module-mediaobject.module-vertical {
+			@extend %mediaobject-flex-top2bottom !optional;
+		}
+		// + VERTICAL + REVERSE
+		.module-mediaobject.module-vertical.module-reverse {
+			@extend %mediaobject-flex-bottom2top !optional;
+		}
+
+	// MODULE-MEDIAOBJECT.SUBLEVEL
+	.module-mediaobject.module-sublevel {
+		@extend %mediaobject-flex-cancel !optional;
+	}
+	.module-mediaobject.module-sublevel .module-inner {
+		@extend %mediaobject-flex !optional;
+	}
+		// + REVERSE
+		.module-mediaobject.module-sublevel.module-reverse {
+			@extend %mediaobject-flex-cancel !optional;
+		}
+		.module-mediaobject.module-sublevel.module-reverse .module-inner {
+			@extend %mediaobject-flex !optional;
+			@extend %mediaobject-flex-right2left !optional;
+		}
+		// + VERTICAL
+		.module-mediaobject.module-sublevel.module-vertical {
+			@extend %mediaobject-flex-cancel !optional;
+		}
+		.module-mediaobject.module-sublevel.module-vertical .module-inner {
+			@extend %mediaobject-flex-top2bottom !optional;
+		}
+		// + VERTICAL + REVERSE
+		.module-mediaobject.module-sublevel.module-vertical.module-reverse {
+			@extend %mediaobject-flex-cancel !optional;
+		}
+		.module-mediaobject.module-sublevel.module-vertical.module-reverse .module-inner {
+			@extend %mediaobject-flex-bottom2top !optional;
+		}
+
+	// ITEM-FIGURE
+	.module-mediaobject .item-figure {
+		@extend %mediaobject-itemfigure !optional;
+		@extend %mediaobject-itemfigure-left !optional;
+	}
+		// + REVERSE
+		.module-mediaobject.module-reverse .item-figure {
+			@extend %mediaobject-itemfigure-right !optional;
+		}
+		// + VERTICAL
+		.module-mediaobject.module-vertical .item-figure {
+			@extend %mediaobject-itemfigure-vertical !optional;
+		}
+		// + REVERSE + VERTICAL
+		.module-mediaobject.module-vertical.module-reverse .item-figure {
+			@extend %mediaobject-itemfigure-vertical !optional;
+		}
+
+	// ITEM-INFO
+	.module-mediaobject .item-info {
+		@extend %mediaobject-iteminfo !optional;
+	}
+
+	.group.archive-grid .module-mediaobject .item-info {
+		@extend %mediaobject-iteminfo--archivegrid !optional;
+	}

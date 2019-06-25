@@ -1,4 +1,4 @@
-/* SETUP | PROTOTYPE-NPR | STYLE - 2019-05-13 10:11 AM */
+/* SETUP | PROTOTYPE-NPR | STYLE - 2019-06-25 9:04 AM */
 /* SETUP | PROTOTYPE-STARTER | STYLE - 2019-05-10 10:02 AM */
 /* SETUP | SETUP-2911 | STYLE - 2019-05-08 8:08 AM */
 /*
@@ -2990,16 +2990,16 @@ th:first-child {
       margin-left: 1rem; } }
 
 /* SETUP | GRID | 2911_SETUP | GRID_GRID - 2019-05-24 */
-.grid-full, .grid-half, .grid-third, .grid-fourth, .grid-fifth, .grid-sixth, .grid-eight {
+.grid-full, .grid-half, .grid-third, .grid-fourth, .grid-fifth, .grid-sixth, .grid-eight, .group.archive-grid, .group.archive-grid-video, .group.archive-grid-podcast {
   display: grid; }
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .grid-full, .grid-half, .grid-third, .grid-fourth, .grid-fifth, .grid-sixth, .grid-eight {
+    .grid-full, .grid-half, .grid-third, .grid-fourth, .grid-fifth, .grid-sixth, .grid-eight, .group.archive-grid, .group.archive-grid-video, .group.archive-grid-podcast {
       display: flex;
       flex-wrap: wrap;
       margin-left: -1rem;
       margin-right: -1rem;
       width: calc(100% + 2rem); }
-      .grid-full::after, .grid-half::after, .grid-third::after, .grid-fourth::after, .grid-fifth::after, .grid-sixth::after, .grid-eight::after {
+      .grid-full::after, .grid-half::after, .grid-third::after, .grid-fourth::after, .grid-fifth::after, .grid-sixth::after, .grid-eight::after, .group.archive-grid::after, .group.archive-grid-video::after, .group.archive-grid-podcast::after {
         clear: both;
         content: "";
         display: block; } }
@@ -3017,7 +3017,7 @@ th:first-child {
 .grid-half > .full {
   grid-column: span 2; }
 
-.grid-third {
+.grid-third, .group.archive-grid, .group.archive-grid-video, .group.archive-grid-podcast {
   grid-template-columns: repeat(3, 1fr); }
 
 .grid-third > .full {
@@ -3612,6 +3612,14 @@ th:first-child {
 .columns, .columns.columns-fifth, .columns.columns-eight {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem; }
+
+.group.archive-grid, .group.archive-grid-video, .group.archive-grid-podcast {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem; }
+  @media only screen and (max-width: 48rem) {
+    .group.archive-grid, .group.archive-grid-video, .group.archive-grid-podcast {
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem; } }
 
 .gap-zero, .gap-zero-x {
   grid-column-gap: 0; }
@@ -5073,6 +5081,45 @@ hr.wp-block-separator {
 
 /* Media Queries
 ---------------------------------------------------------------------------- */
+/* SETUP | MODULE | 3011_PROTOTYPE-NPR | ARCHIVE-GRID - 2019-06-25 */
+/* SETUP | MODULE | 3011_PROTOTYPE-NPR | MEDIAOBJECT - 2019-06-25 */
+.module-mediaobject, .module-mediaobject.module-sublevel .module-inner, .module-mediaobject.module-sublevel.module-reverse .module-inner {
+  display: flex; }
+
+.module-mediaobject.module-sublevel, .module-mediaobject.module-sublevel.module-reverse, .module-mediaobject.module-sublevel.module-vertical, .module-mediaobject.module-sublevel.module-vertical.module-reverse {
+  display: block; }
+
+.module-mediaobject.module-reverse, .module-mediaobject.module-sublevel.module-reverse .module-inner {
+  flex-direction: row-reverse; }
+
+.module-mediaobject.module-vertical, .module-mediaobject.module-sublevel.module-vertical .module-inner {
+  flex-direction: column; }
+
+.module-mediaobject.module-vertical.module-reverse, .module-mediaobject.module-sublevel.module-vertical.module-reverse .module-inner {
+  flex-direction: column-reverse; }
+
+.module-mediaobject {
+  align-items: flex-start; }
+
+.module-mediaobject .item-figure {
+  margin-right: 1rem;
+  margin-left: 0; }
+
+.module-mediaobject.module-reverse .item-figure {
+  margin-right: 0;
+  margin-left: 1rem; }
+
+.module-mediaobject.module-vertical .item-figure, .module-mediaobject.module-vertical.module-reverse .item-figure {
+  margin-right: 0;
+  margin-left: 0; }
+
+.module-mediaobject .item-info {
+  flex: 1; }
+
+.group.archive-grid .module-mediaobject .item-info {
+  background-color: #000;
+  padding: 0.5rem 0.5rem 0.5rem 1rem; }
+
 /* SETUP | GUIDE | 2911_SETUP | LABEL - 2019-04-02 */
 .guide-label.indent, .guide-line.indent, .guide-summary.indent, .guide-box.indent {
   margin-left: 2rem; }
