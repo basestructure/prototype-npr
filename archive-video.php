@@ -7,7 +7,7 @@
  * to something like archive-video.php for GLOBAL ARCHIVE template
  * ----------------------------------------------------------------------------------------- */
 /**
- * Template_Name: Video Entry
+ * Template_Name: Video Archive
  * Description: This template is designated for a single video entry
  */
 
@@ -63,7 +63,7 @@ class SWPTemplateSample {
 		$template 			= 'mediaobject_grid_video.php'; // will default to pre-coded sample_template.php if no value is declared
 		$tax_name 			= '';
 		$tax_term			= '';
-		$posts_per_page 	= 8; // will default to "Blog pages show at most" if no value is declared | -1 to show all
+		$posts_per_page 	= 6; // will default to "Blog pages show at most" if no value is declared | -1 to show all
 		$paged				= $paged1;
 		$orderbymeta		= ''; // specify custom field to be ordered by
 		$orderby			= ''; // order by what field (default is date)
@@ -71,7 +71,7 @@ class SWPTemplateSample {
 		$pagination_temp	= 1; // choose from 1, 2 & 3 (any other value will hide the page nav)
 
 		// opening container tag here
-		echo '<div class="group-videos">';
+		echo '<div class="group archive-grid archive-grid-video">';
 		echo $b->swp_load_entries( $post_type, $posts_per_page, $tax_name, $tax_term, $paged, $orderbymeta, $orderby, $order, $template, $pagination_temp );
 		echo '</div>';
 		// closing container tag here
