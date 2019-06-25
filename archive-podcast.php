@@ -7,7 +7,7 @@
  * to something like archive-video.php for GLOBAL ARCHIVE template
  * ----------------------------------------------------------------------------------------- */
 /**
- * Template_Name: Video Entry
+ * Template_Name: Podcast Archive
  * Description: This template is designated for a single video entry
  */
 
@@ -41,7 +41,7 @@ $a = new SWPTemplateSample();
 class SWPTemplateSample {
 
 	// sample template function
-	public function swp_video_archive_function() {
+	public function swp_podcast_archive_function() {
 
 		// do not edit the next line
 		$b = new SWP_QueryEntries();
@@ -59,7 +59,7 @@ class SWPTemplateSample {
 		// pagination
 		$paged1 = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-		$post_type 			= 'video';
+		$post_type 			= 'podcast';
 		$template 			= 'mediaobject_grid_video.php'; // will default to pre-coded sample_template.php if no value is declared
 		$tax_name 			= '';
 		$tax_term			= '';
@@ -71,9 +71,7 @@ class SWPTemplateSample {
 		$pagination_temp	= 1; // choose from 1, 2 & 3 (any other value will hide the page nav)
 
 		// opening container tag here
-		echo '<div class="group-videos">';
 		echo $b->swp_load_entries( $post_type, $posts_per_page, $tax_name, $tax_term, $paged, $orderbymeta, $orderby, $order, $template, $pagination_temp );
-		echo '</div>';
 		// closing container tag here
 
 	}
@@ -84,7 +82,7 @@ class SWPTemplateSample {
 		if( !is_admin() ) {
 
 			// DISPLAY IN CONTENT AREA
-			add_action( 'genesis_loop', array( $this, 'swp_video_archive_function' ) );
+			add_action( 'genesis_loop', array( $this, 'swp_podcast_archive_function' ) );
 
 		}
 
