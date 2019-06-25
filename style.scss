@@ -1,0 +1,157 @@
+/* SETUP | PROTOTYPE-NPR | STYLE - 2019-05-13 10:11 AM */
+/* SETUP | PROTOTYPE-STARTER | STYLE - 2019-05-10 10:02 AM */
+/* SETUP | SETUP-2911 | STYLE - 2019-05-08 8:08 AM */
+// 2.9.1.1_A
+// GENESIS-SAMPLE 2.9.1
+// 2.8.1.1_A
+// GENESIS-SAMPLE 2.8.0
+// SETUP | SETUP-2801 | STYLE - 2019-02-12 4:46 AM
+// SETUP | SETUP-2721 | STYLE - 2018-01-06 12:30 PM
+// GENESIS-SAMPLE 2.7.1
+
+// THEME
+@import 	"themeinfo";
+@import 	"wp/2911_setup/normalize";
+
+// BOURBON
+@import 	"bourbon";
+@import 	"neat";
+@import 	"grid/2911_setup/neat";
+
+// -------------------------------------------------------------------- SELECTORS | 2019-04-17
+@import 	"selector/2911_setup/boxsizing";
+@import 	"selector/2911_setup/clear";
+@import 	"selector/2911_setup/display";
+
+// -------------------------------------------------------------------- VARIABLES | 2019-04-02
+
+// WIDTH
+@import 	"variables/2911_setup/width-grid";
+@import 	"variables/2911_setup/width-layout";
+@import 	"variables/2911_setup/width-range";
+@import 	"variables/2911_setup/width-space";
+@import 	"variables/2911_setup/responsive-range";
+
+// TYPOGRAPHY
+@import 	"variables/2911_setup/fontfamily";
+			@import 	"variables/2911_prototype-starter/fontsize";
+@import 	"variables/2911_setup/fontweight";
+@import 	"variables/2911_setup/lineheight";
+@import 	"variables/2911_setup/letterspacing";
+@import 	"variables/2911_setup/color";
+
+// -------------------------------------------------------------------- COLOR | 2019-04-02
+@import 	"color/2911_setup/color";
+@import 	"color/2911_setup/bgcolor";
+
+// -------------------------------------------------------------------- EFFECT | 2019-04-02
+@import 	"effect/2911_setup/tint";
+@import 	"effect/2911_setup/fade";
+@import 	"effect/2911_setup/shadow";
+@import 	"effect/2911_setup/shade";
+
+
+@import 	"genesis/genesis-sample-271/typographical-elements";		// GENESIS-SAMPLE 2.7.1
+
+
+// -------------------------------------------------------------------- CONTENT | 2019-04-02
+@import 	"content/2911_setup/link";
+@import 	"content/2911_setup/body";
+@import 	"content/2911_setup/headline";
+@import 	"content/2911_setup/paragraph";
+@import 	"content/2911_setup/list";
+@import 	"content/2911_setup/title";
+@import 	"content/2911_setup/align";
+@import 	"content/2911_setup/button";
+@import 	"content/2911_setup/fullwidth";
+@import 	"content/2911_setup/block";
+
+// -------------------------------------------------------------------- TYPE | 2019-04-02
+@import 	"type/2911_setup/family";
+@import 	"type/2911_setup/size";
+@import 	"type/2911_setup/weight";
+@import 	"type/2911_setup/height";
+
+// -------------------------------------------------------------------- SPACING | 2019-04-02
+@import 	"spacing/2911_setup/space";
+@import 	"spacing/2911_setup/space-responsive";
+@import 	"spacing/2911_setup/spacein";
+@import 	"spacing/2911_setup/spacein-responsive";
+
+// -------------------------------------------------------------------- FORM | 2019-04-02
+@import 	"form/2911_setup/button";
+
+
+@import 	"genesis/genesis-sample-291/defaults";						// GENESIS-SAMPLE 2.9.1
+
+
+// -------------------------------------------------------------------- GRID | 2019-04-02
+@import 	"grid/2911_setup/column_grid";
+@import 	"grid/2911_setup/grid_grid";
+@import 	"grid/2911_setup/column-responsive_grid";
+@import 	"grid/2911_setup/grid-responsive_grid";
+@import 	"grid/2911_setup/gap-responsive_grid";
+
+
+@import 	"genesis/genesis-sample-291/structure-layout";				// GENESIS-SAMPLE 2.9.1
+@import 	"genesis/genesis-sample-291/common-classes";				// GENESIS-SAMPLE 2.9.1
+@import 	"genesis/genesis-sample-291/widgets";						// GENESIS-SAMPLE 2.9.1
+@import 	"genesis/genesis-sample-291/plugins";						// GENESIS-SAMPLE 2.9.1
+@import 	"genesis/genesis-sample-291/skip-links";					// GENESIS-SAMPLE 2.9.1
+@import 	"genesis/genesis-sample-291/site-header";					// GENESIS-SAMPLE 2.9.1
+@import 	"genesis/genesis-sample-291/site-navigation";				// GENESIS-SAMPLE 2.9.1
+@import 	"genesis/genesis-sample-291/content-area";					// GENESIS-SAMPLE 2.9.1
+@import 	"genesis/genesis-sample-291/sidebar";						// GENESIS-SAMPLE 2.9.1
+@import 	"genesis/genesis-sample-291/footer-widgets";				// GENESIS-SAMPLE 2.9.1
+@import 	"genesis/genesis-sample-291/site-footer";					// GENESIS-SAMPLE 2.9.1
+
+
+// -------------------------------------------------------------------- HEADER | 2019-05-10
+			@import 	"header/2911_prototype-starter/header-topdown-type-starter_flex";
+
+// -------------------------------------------------------------------- INNER | 2019-04-02
+@import 	"inner/2911_setup/inner_grid";
+
+// -------------------------------------------------------------------- LAYOUT | 2019-04-02
+//@import 	"layout/2911_setup/full_grid";
+@import 	"layout/2911_setup/cs_grid";
+@import 	"layout/2911_setup/sc_grid";
+
+// -------------------------------------------------------------------- FOOTER | 2019-04-02
+@import 	"footer/2911_setup/footer_grid";
+
+// -------------------------------------------------------------------- CREDIT | 2019-04-02
+@import 	"credit/2911_setup/credit-swp_grid";
+
+// -------------------------------------------------------------------- LOOP | 2019-04-02
+@import 	"loop/2911_setup/entry";
+@import 	"loop/2911_setup/entrytitle";
+@import 	"loop/2911_setup/entrymeta";
+@import 	"loop/2911_setup/entryimage";
+@import 	"loop/2911_setup/authorbox";
+@import 	"loop/2911_setup/avatar";
+@import 	"loop/2911_setup/comments";
+
+// -------------------------------------------------------------------- GUI | 2019-04-02
+@import 	"gui/2911_setup/flex";
+@import 	"gui/2911_setup/outerinner";
+
+
+@import 	"genesis/genesis-sample-291/media-queries";					// GENESIS-SAMPLE 2.9.1
+@import 	"genesis/genesis-sample-291/print-styles";					// GENESIS-SAMPLE 2.9.1
+
+
+// -------------------------------------------------------------------- GUTENBERG | 2019-04-02
+@import 	"gutenberg/2911_setup/typography";
+@import 	"gutenberg/2911_setup/columns";
+@import 	"gutenberg/2911_setup/images";
+@import 	"gutenberg/2911_setup/blockquotes";
+@import 	"gutenberg/2911_setup/buttons";
+@import 	"gutenberg/2911_setup/uncategorized";
+//@import 	"gutenberg/2911_setup/styleeditor";
+
+// -------------------------------------------------------------------- GUIDE | 2019-04-02
+@import 	"guide/2911_setup/label";
+//@import 	"guide/260_setupbasic/header";
+//@import 	"guide/260_setupbasic/inner";
+//@import 	"guide/260_setupbasic/footer";
