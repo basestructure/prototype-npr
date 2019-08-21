@@ -1,10 +1,10 @@
 <?php
 /**
- * SETUP-2911
+ * Genesis Sample.
  *
- * This file adds functions to the Genesis Theme SETUP-2911.
+ * This file adds functions to the Genesis Sample Theme.
  *
- * @package SETUP-2911
+ * @package Genesis Sample
  * @author  StudioPress
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
@@ -12,10 +12,6 @@
 
 // Starts the engine.
 require_once get_template_directory() . '/lib/init.php';
-
-// Defines constants to help enqueue scripts and styles.
-define( 'CHILD_THEME_HANDLE', sanitize_title_with_dashes( wp_get_theme()->get( 'Name' ) ) );
-define( 'CHILD_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 
 // Sets up the Theme.
 require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
@@ -28,7 +24,7 @@ add_action( 'after_setup_theme', 'genesis_sample_localization_setup' );
  */
 function genesis_sample_localization_setup() {
 
-	load_child_theme_textdomain( 'genesis-sample', get_stylesheet_directory() . '/languages' );
+	load_child_theme_textdomain( genesis_get_theme_handle(), get_stylesheet_directory() . '/languages' );
 
 }
 
@@ -60,6 +56,13 @@ function genesis_child_gutenberg_support() { // phpcs:ignore WordPress.NamingCon
 	require_once get_stylesheet_directory() . '/lib/gutenberg/init.php';
 }
 
+// Registers the responsive menus.
+/*
+if ( function_exists( 'genesis_register_responsive_menus' ) ) {
+	genesis_register_responsive_menus( genesis_get_config( 'responsive-menus' ) );
+}
+*/
+
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 /**
  * Enqueues scripts and styles.
@@ -68,59 +71,77 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
  */
 function genesis_sample_enqueue_scripts_styles() {
 
+	$appearance = genesis_get_config( 'appearance' );
+
 	wp_enqueue_style(
-		'genesis-sample-fonts',
-		'//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700',
+		genesis_get_theme_handle() . '-fonts',
+		$appearance['fonts-url'],
 		array(),
-		CHILD_THEME_VERSION
+		genesis_get_theme_version()
 	);
 
 	wp_enqueue_style( 'dashicons' );
 
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-
-	wp_enqueue_script(
-		'genesis-sample',
-		get_stylesheet_directory_uri() . '/js/genesis-sample.js',
-		array( 'jquery' ),
-		CHILD_THEME_VERSION,
-		true
-	);
+	if ( genesis_is_amp() ) {
+		wp_enqueue_style(
+			genesis_get_theme_handle() . '-amp',
+			get_stylesheet_directory_uri() . '/lib/amp/amp.css',
+			array( genesis_get_theme_handle() ),
+			genesis_get_theme_version()
+		);
+	}
 
 }
 
-// Adds support for HTML5 markup structure.
-add_theme_support( 'html5', genesis_get_config( 'html5' ) );
+add_action( 'after_setup_theme', 'genesis_sample_theme_support', 9 );
+/**
+ * Add desired theme supports.
+ *
+ * See config file at `config/theme-supports.php`.
+ *
+ * @since 3.0.0
+ */
+function genesis_sample_theme_support() {
 
-// Adds support for accessibility.
-add_theme_support( 'genesis-accessibility', genesis_get_config( 'accessibility' ) );
+	$theme_supports = genesis_get_config( 'theme-supports' );
 
-// Adds viewport meta tag for mobile browsers.
-add_theme_support( 'genesis-responsive-viewport' );
+	foreach ( $theme_supports as $feature => $args ) {
+		add_theme_support( $feature, $args );
+	}
 
-// Adds custom logo in Customizer > Site Identity.
-add_theme_support( 'custom-logo', genesis_get_config( 'custom-logo' ) );
+}
 
-// Renames primary and secondary navigation menus.
-add_theme_support( 'genesis-menus', genesis_get_config( 'menus' ) );
+add_filter( 'genesis_seo_title', 'genesis_sample_header_title', 10, 3 );
+/**
+ * Removes the link from the hidden site title if a custom logo is in use.
+ *
+ * Without this filter, the site title is hidden with CSS when a custom logo
+ * is in use, but the link it contains is still accessible by keyboard.
+ *
+ * @since 1.2.0
+ *
+ * @param string $title  The full title.
+ * @param string $inside The content inside the title element.
+ * @param string $wrap   The wrapping element name, such as h1.
+ * @return string The site title with anchor removed if a custom logo is active.
+ */
+function genesis_sample_header_title( $title, $inside, $wrap ) {
 
-//* Display author box on single posts
-//add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
+	if ( has_custom_logo() ) {
+		$inside = get_bloginfo( 'name' );
+	}
 
-// Add support for post formats
-add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
+	return sprintf( '<%1$s class="site-title">%2$s</%1$s>', $wrap, $inside );
+
+}
 
 // Adds image sizes.
-add_image_size( 'card-ratio32', 720, 480, true );
+//add_image_size( 'card-ratio43', 768, 576, true );
+//add_image_size( 'icon-ratio43', 150, 112, true );
+add_image_size( 'card-ratio32', 768, 512, true );
 add_image_size( 'icon-ratio32', 150, 100, true );
-add_image_size( 'card-ratio169', 720, 405, true );
+add_image_size( 'card-ratio169', 768, 432, true );
 add_image_size( 'icon-ratio169', 150, 85, true );
-
-// Adds support for after entry widget.
-add_theme_support( 'genesis-after-entry-widget-area' );
-
-// Adds support for 3-column footer widgets.
-add_theme_support( 'genesis-footer-widgets', 3 );
 
 // Removes header right widget area.
 unregister_sidebar( 'header-right' );
@@ -132,25 +153,6 @@ unregister_sidebar( 'sidebar-alt' );
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
-
-// Removes output of primary navigation right extras.
-remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
-remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
-
-add_action( 'genesis_theme_settings_metaboxes', 'genesis_sample_remove_metaboxes' );
-/**
- * Removes output of unused admin settings metaboxes.
- *
- * @since 2.6.0
- *
- * @param string $_genesis_admin_settings The admin screen to remove meta boxes from.
- */
-function genesis_sample_remove_metaboxes( $_genesis_admin_settings ) {
-
-	remove_meta_box( 'genesis-theme-settings-header', $_genesis_admin_settings, 'main' );
-	remove_meta_box( 'genesis-theme-settings-nav', $_genesis_admin_settings, 'main' );
-
-}
 
 add_filter( 'genesis_customizer_theme_settings_config', 'genesis_sample_remove_customizer_settings' );
 /**
@@ -179,6 +181,26 @@ add_action( 'genesis_header', 'genesis_do_nav', 12 );
 // Repositions the secondary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_footer', 'genesis_do_subnav', 10 );
+
+add_filter( 'wp_nav_menu_args', 'genesis_sample_secondary_menu_args' );
+/**
+ * Reduces secondary navigation menu to one level depth.
+ *
+ * @since 2.2.3
+ *
+ * @param array $args Original menu options.
+ * @return array Menu options with depth set to 1.
+ */
+function genesis_sample_secondary_menu_args( $args ) {
+
+	if ( 'secondary' !== $args['theme_location'] ) {
+		return $args;
+	}
+
+	$args['depth'] = 1;
+	return $args;
+
+}
 
 add_filter( 'genesis_author_box_gravatar_size', 'genesis_sample_author_box_gravatar' );
 /**
@@ -212,12 +234,47 @@ function genesis_sample_comments_gravatar( $args ) {
 }
 
 // ------------------------------------------------------------------------
-// SETUP-2911 - CREDITS
+// PROTOTYPE-NPR - ARCHIVE TEMPLATE POSTS
+
+add_action( 'pre_get_posts', 'be_change_event_posts_per_page' );
+/**
+ * Change Posts Per Page for Event Archive
+ * 
+ * @author Bill Erickson
+ * @link http://www.billerickson.net/customize-the-wordpress-query/
+ * @param object $query data
+ *
+ */
+function be_change_event_posts_per_page( $query ) {
+
+    // ARCHIVE - global
+	if( $query->is_main_query() && !is_admin()) {
+		$query->set( 'posts_per_page', '6' );
+	}
+	
+	// ARCHIVE - social
+	/*
+	if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'social' ) ) {
+		$query->set( 'posts_per_page', '3' );
+	}
+	*/
+	
+	// ARCHIVE - social_type | instagram
+	if( $query->is_main_query() && !is_admin() && is_tax( 'social_type','instagram' ) ) {
+		$query->set( 'posts_per_page', '10' );
+	}
+}
+
+// ARCHIVE TEMPLATE POSTS -- END
+// ------------------------------------------------------------------------
+
+// ------------------------------------------------------------------------
+// SETUP-3020 - CREDITS SWP
 
 //* Add the credits section on the site footer
 remove_action( 'genesis_footer', 'genesis_do_footer' );
-add_action( 'genesis_footer', 'swp_sitefooter_credit' );
-function swp_sitefooter_credit() {
+add_action( 'genesis_footer', 'setup_sitefooter_credit_swp' );
+function setup_sitefooter_credit_swp() {
 	?>
 	<div class="credit">
 		<div class="sitefor">

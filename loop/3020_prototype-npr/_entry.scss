@@ -1,0 +1,91 @@
+/* SETUP | LOOP | 3020_PROTOTYPE-NPR | ENTRY - 2019-08-08 */
+
+// -------------------------------------
+// EXTEND
+
+// ENTRY
+
+	%entry {}
+		%entry--blog {
+			//margin-bottom: #{$space-lrg}rem;
+		}
+		%entry--single {}
+		%entry--single-content {
+			//margin-bottom: #{$space-xlrg}rem;
+		}
+		%entry--archive {
+			//background-color: #f9f9f9;
+			//padding: #{$space-med}rem;
+			//margin-bottom: #{$space-lrg}rem;
+		}
+		%entry--category {}
+		%entry--tag {}
+
+		%entry--featuredcontent {
+			//background-color: #f9f9f9;
+			//padding: #{$space-med}rem;
+			//margin-bottom: #{$space-default}rem;
+		}
+		%entry--featuredpost {}
+		%entry--featuredpage {}
+
+	%entry-header {}
+
+	%entry-content {}
+
+	%entry-footer {}
+
+
+// -------------------------------------
+// SELECTORS
+
+
+// ENTRY
+
+	.entry {
+		@extend %entry !optional;
+	}
+		.single .entry {
+			@extend %entry--single !optional;
+		}
+		.single .content .entry {
+			@extend %entry--single-content !optional;
+		}
+
+		.blog .entry {
+			@extend %entry--blog !optional;
+			@extend %entry--archive !optional;
+		}
+		.archive .entry {
+			@extend %entry--archive !optional;
+		}
+		.category .entry {
+			@extend %entry--category !optional;
+			@extend %entry--archive !optional;
+		}
+		.tag .entry {
+			@extend %entry--tag !optional;
+			@extend %entry--archive !optional;
+		}
+
+		.featured-content .entry {
+			@extend %entry--featuredcontent !optional;
+		}
+		.featured-post .entry {
+			@extend %entry--featuredpost !optional;
+		}
+		.featured-page .entry {
+			@extend %entry--featuredpage !optional;
+		}
+
+	.entry-header {
+		@extend %entry-header !optional;
+	}
+
+	.entry-content {
+		@extend %entry-content !optional;
+	}
+
+	.entry-footer {
+		@extend %entry-footer !optional;
+	}

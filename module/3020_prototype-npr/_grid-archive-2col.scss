@@ -1,0 +1,29 @@
+/* SETUP | MODULE | 3020_PROTOTYPE-NPR | GRID-ARCHIVE-2COL - 2019-08-09 */
+
+// -------------------------------------
+// EXTEND
+
+
+// -------------------------------------
+// SELECTORS
+
+	// ARCHIVE COLUMNS
+	.home.grid-archive.grid-archive-2col .content,
+	.blog.grid-archive.grid-archive-2col .content,
+	.archive.grid-archive.grid-archive-2col .content {
+		@extend %grid !optional;
+		@extend %gap-med !optional;
+		@extend %grid-half !optional;
+	}
+	
+	.home.grid-archive.grid-archive-2col .content .archive-description,
+	.blog.grid-archive.grid-archive-2col .content .archive-description,
+	.archive.grid-archive.grid-archive-2col .content .archive-description {
+		@extend %grid-half-full !optional;
+	}
+
+	.home.grid-archive.grid-archive-2col .content .archive-pagination,
+	.blog.grid-archive.grid-archive-2col .content .archive-pagination,
+	.archive.grid-archive.grid-archive-2col .content .archive-pagination {
+		@extend %grid-half-full !optional;
+	}

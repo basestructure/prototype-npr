@@ -1,13 +1,7 @@
-/* SETUP | PROTOTYPE-NPR | STYLE - 2019-06-25 9:04 AM */
-/* SETUP | PROTOTYPE-STARTER | STYLE - 2019-05-10 10:02 AM */
-/* SETUP | SETUP-2911 | STYLE - 2019-05-08 8:08 AM */
-// 2.9.1.1_A
-// GENESIS-SAMPLE 2.9.1
-// 2.8.1.1_A
-// GENESIS-SAMPLE 2.8.0
-// SETUP | SETUP-2801 | STYLE - 2019-02-12 4:46 AM
-// SETUP | SETUP-2721 | STYLE - 2018-01-06 12:30 PM
-// GENESIS-SAMPLE 2.7.1
+/* SETUP | PROTOTYPE-NPR | STYLE - 2019-08-16 2:43 PM */
+/* SETUP | SETUP-3020 | STYLE - 2019-07-29 12:11 PM */
+// SETUP-3020 A
+// GENESIS-SAMPLE 3.0.2
 
 // THEME
 @import 	"themeinfo";
@@ -23,20 +17,21 @@
 @import 	"selector/2911_setup/clear";
 @import 	"selector/2911_setup/display";
 
-// -------------------------------------------------------------------- VARIABLES | 2019-04-02
+// -------------------------------------------------------------------- VARIABLES | 2019-06-29
 
 // WIDTH
 @import 	"variables/2911_setup/width-grid";
 @import 	"variables/2911_setup/width-layout";
 @import 	"variables/2911_setup/width-range";
 @import 	"variables/2911_setup/width-space";
+@import 	"variables/2911_setup/width-line";
 @import 	"variables/2911_setup/responsive-range";
 
 // TYPOGRAPHY
-@import 	"variables/2911_setup/fontfamily";
-			@import 	"variables/2911_prototype-starter/fontsize";
-@import 	"variables/2911_setup/fontweight";
-@import 	"variables/2911_setup/lineheight";
+@import 	"variables/3011_setup/fontfamily";
+@import 	"variables/3011_setup/fontsize";
+@import 	"variables/3011_setup/fontweight";
+@import 	"variables/3011_setup/lineheight";
 @import 	"variables/2911_setup/letterspacing";
 @import 	"variables/2911_setup/color";
 
@@ -54,21 +49,22 @@
 @import 	"genesis/genesis-sample-271/typographical-elements";		// GENESIS-SAMPLE 2.7.1
 
 
-// -------------------------------------------------------------------- CONTENT | 2019-04-02
+// -------------------------------------------------------------------- CONTENT | 2019-06-29
 @import 	"content/2911_setup/link";
 @import 	"content/2911_setup/body";
 @import 	"content/2911_setup/headline";
 @import 	"content/2911_setup/paragraph";
 @import 	"content/2911_setup/list";
-@import 	"content/2911_setup/title";
+@import 	"content/3011_setup/title";
 @import 	"content/2911_setup/align";
 @import 	"content/2911_setup/button";
 @import 	"content/2911_setup/fullwidth";
 @import 	"content/2911_setup/block";
+@import 	"content/2911_setup/border";
 
-// -------------------------------------------------------------------- TYPE | 2019-04-02
+// -------------------------------------------------------------------- TYPE | 2019-07-23
 @import 	"type/2911_setup/family";
-@import 	"type/2911_setup/size";
+@import 	"type/3020_setup/size";
 @import 	"type/2911_setup/weight";
 @import 	"type/2911_setup/height";
 
@@ -106,8 +102,11 @@
 @import 	"genesis/genesis-sample-291/site-footer";					// GENESIS-SAMPLE 2.9.1
 
 
-// -------------------------------------------------------------------- HEADER | 2019-05-10
-			@import 	"header/2911_prototype-starter/header-topdown-type-starter_flex";
+// -------------------------------------------------------------------- MENU | 2019-07-24
+@import 	"menu/3020_setup/nav";
+
+// -------------------------------------------------------------------- HEADER | 2019-07-29
+@import 	"header/3020_setup/header-leftright-line_flex";
 
 // -------------------------------------------------------------------- INNER | 2019-04-02
 @import 	"inner/2911_setup/inner_grid";
@@ -123,9 +122,9 @@
 // -------------------------------------------------------------------- CREDIT | 2019-04-02
 @import 	"credit/2911_setup/credit-swp_grid";
 
-// -------------------------------------------------------------------- LOOP | 2019-04-02
-@import 	"loop/2911_setup/entry";
-@import 	"loop/2911_setup/entrytitle";
+// -------------------------------------------------------------------- LOOP | 2019-08-08
+			@import 	"loop/3020_prototype-npr/entry";
+			@import 	"loop/3020_prototype-npr/entrytitle";
 @import 	"loop/2911_setup/entrymeta";
 @import 	"loop/2911_setup/entryimage";
 @import 	"loop/2911_setup/authorbox";
@@ -136,13 +135,15 @@
 @import 	"gui/2911_setup/flex";
 @import 	"gui/2911_setup/outerinner";
 
+// -------------------------------------------------------------------- GUI | 2019-08-16
+@import 	"module/3020_setup/mediaobject";
 
 @import 	"genesis/genesis-sample-291/media-queries";					// GENESIS-SAMPLE 2.9.1
 @import 	"genesis/genesis-sample-291/print-styles";					// GENESIS-SAMPLE 2.9.1
 
 
-// -------------------------------------------------------------------- GUTENBERG | 2019-04-02
-@import 	"gutenberg/2911_setup/typography";
+// -------------------------------------------------------------------- GUTENBERG | 2019-07-23
+@import 	"gutenberg/3020_setup/typography";
 @import 	"gutenberg/2911_setup/columns";
 @import 	"gutenberg/2911_setup/images";
 @import 	"gutenberg/2911_setup/blockquotes";
@@ -150,9 +151,13 @@
 @import 	"gutenberg/2911_setup/uncategorized";
 //@import 	"gutenberg/2911_setup/styleeditor";
 
-// -------------------------------------------------------------------- MODULE | 2019-06-25
-			@import 	"module/3011_prototype-npr/archive-grid";
-			@import 	"module/3011_prototype-npr/mediaobject";
+// -------------------------------------------------------------------- MODULE | 2019-08-09
+			@import 	"module/3020_prototype-npr/grid-archive";
+			@import 	"module/3020_prototype-npr/grid-archive-2col";
+			@import 	"module/3020_prototype-npr/grid-feature";
+			@import 	"module/3020_prototype-npr/mediaobject";
+			@import 	"module/3020_prototype-npr/feature-item";
+			@import 	"module/3020_prototype-npr/single-item";
 
 // -------------------------------------------------------------------- GUIDE | 2019-04-02
 @import 	"guide/2911_setup/label";

@@ -14,7 +14,7 @@ SLUG: two ways of getting the slug (https://stackoverflow.com/questions/33842251
 		$post = get_post( $post_id ); 
 		$slug = $post->post_name;
 
-EXCERPT: get the excerpt()
+EXCERPT: get_the_excerpt()
 
 CATEGORY: get_the_category()
 

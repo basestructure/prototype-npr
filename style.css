@@ -1,6 +1,5 @@
-/* SETUP | PROTOTYPE-NPR | STYLE - 2019-06-25 9:04 AM */
-/* SETUP | PROTOTYPE-STARTER | STYLE - 2019-05-10 10:02 AM */
-/* SETUP | SETUP-2911 | STYLE - 2019-05-08 8:08 AM */
+/* SETUP | PROTOTYPE-NPR | STYLE - 2019-08-16 2:43 PM */
+/* SETUP | SETUP-3020 | STYLE - 2019-07-29 12:11 PM */
 /*
 Theme Name: PROTOTYPE-NPR
 Theme URI: https://prototype-npr.basestructure.com/
@@ -8,7 +7,7 @@ Description: This is the prototype theme created by Mark Corpuz.
 Author: Mark Corpuz
 Author URI: https://markcorpuz.com/
 
-Version: 2.9.1.1
+Version: 3.0.2.0
 
 Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -17,7 +16,7 @@ Template: genesis
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Text Domain: prototype-npr
+Text Domain: setup-3020
 */
 /* SETUP | WP | 2911_SETUP | NORMALIZE - 2019-04-02 */
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -207,11 +206,12 @@ a.shadow:link, a.shadow:hover {
 /* SETUP | VARIABLES | 2911_SETUP | WIDTH-LAYOUT - 2019-04-02 */
 /* SETUP | VARIABLES | 2911_SETUP | WIDTH-RANGE - 2019-04-02 */
 /* SETUP | VARIABLES | 2911_SETUP | WIDTH-SPACE - 2019-04-02 */
+/* SETUP | VARIABLES | 2911_SETUP | WIDTH-LINE - 2019-05-27 */
 /* SETUP | VARIABLES | 2911_SETUP | RESPONSIVE-RANGE - 2019-04-02 */
-/* SETUP | VARIABLES | 2911_SETUP | FONTFAMILY - 2019-04-16 */
-/* SETUP | VARIABLES | 2911_PROTOTYPE-STARTER | FONTSIZE - 2019-05-10 */
-/* SETUP | VARIABLES | 2911_SETUP | FONTWEIGHT - 2019-04-02 */
-/* SETUP | VARIABLES | 2911_SETUP | LINEHEIGHT - 2019-05-26 */
+/* SETUP | VARIABLES | 3011_SETUP | FONTFAMILY - 2019-06-29 */
+/* SETUP | VARIABLES | 3011_SETUP | FONTSIZE - 2019-06-30 */
+/* SETUP | VARIABLES | 3011_SETUP | FONTWEIGHT - 2019-06-29 */
+/* SETUP | VARIABLES | 3011_SETUP | LINEHEIGHT - 2019-06-29 */
 /* SETUP | VARIABLES | 2911_SETUP | LETTERSPACING - 2019-04-02 */
 /* SETUP | VARIABLES | 2911_SETUP | COLOR - 2019-04-02 */
 /* SETUP | COLOR | 2911_SETUP | COLOR - 2019-04-02 */
@@ -801,7 +801,7 @@ ol.list-inside,
   margin-bottom: 0;
   margin-left: 1.5rem; }
 
-/* SETUP | CONTENT | 2911_SETUP | TITLE - 2019-04-02 */
+/* SETUP | CONTENT | 3011_SETUP | TITLE - 2019-06-29 */
 .entry-title {
   font-size: 3rem;
   font-weight: 600;
@@ -821,20 +821,38 @@ ol.list-inside,
 .widgettitle {
   font-size: 0.875rem; }
 
-.archive .entry-title, .category .entry-title, .tag .entry-title, .blog .entry-title, .search-results .entry-title {
-  font-size: 2.25rem;
+.blog .entry-title, .category .entry-title, .tag .entry-title, .search-results .entry-title {
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 0.5rem; }
   @media only screen and (max-width: 48rem) {
-    .archive .entry-title, .category .entry-title, .tag .entry-title, .blog .entry-title, .search-results .entry-title {
+    .blog .entry-title, .category .entry-title, .tag .entry-title, .search-results .entry-title {
       font-size: 2.25rem; } }
   @media only screen and (max-width: 32rem) {
-    .archive .entry-title, .category .entry-title, .tag .entry-title, .blog .entry-title, .search-results .entry-title {
+    .blog .entry-title, .category .entry-title, .tag .entry-title, .search-results .entry-title {
+      font-size: 1.5rem; } }
+
+.archive .entry-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 0.5rem; }
+  @media only screen and (max-width: 48rem) {
+    .archive .entry-title {
+      font-size: 1.5rem; } }
+  @media only screen and (max-width: 32rem) {
+    .archive .entry-title {
       font-size: 1.5rem; } }
 
 .archive-title {
   font-size: 2.125rem; }
+  @media only screen and (max-width: 48rem) {
+    .archive-title {
+      font-size: 1.5rem; } }
+  @media only screen and (max-width: 32rem) {
+    .archive-title {
+      font-size: 1.5rem; } }
 
 /* SETUP | CONTENT | 2911_SETUP | ALIGN - 2019-04-02 */
 .alignleft, img.alignleft {
@@ -1049,7 +1067,7 @@ a.button:link {
   text-decoration: none; }
 
 .button:hover,
-a.button:hover, button:hover, input:hover[type="button"], input:hover[type="reset"], input:hover[type="submit"], .content .wp-block-button .wp-block-button__link:focus,
+a.button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .content .wp-block-button .wp-block-button__link:focus,
 .content .wp-block-button .wp-block-button__link:hover {
   color: #147FC4;
   background-color: #eee;
@@ -1211,6 +1229,114 @@ a.button-red:hover {
       margin-left: -2rem;
       margin-right: -2rem; } }
 
+/* SETUP | CONTENT | 2911_SETUP | BORDER - 2019-05-27 */
+.border, .border-top, .border-right, .border-bottom, .border-left {
+  border-style: solid; }
+
+.border-line {
+  border-style: solid; }
+
+.border-dashed {
+  border-style: dashed; }
+
+.border-dotted {
+  border-style: dotted; }
+
+.border-double,
+.border.border-double {
+  border-style: double; }
+
+.border {
+  border-width: 0.063rem; }
+
+.border-top {
+  border-top-width: 0.063rem; }
+
+.border-right {
+  border-right-width: 0.063rem; }
+
+.border-bottom {
+  border-bottom-width: 0.063rem; }
+
+.border-left {
+  border-left-width: 0.063rem; }
+
+.border-thinner {
+  border-width: 0.063rem; }
+
+.border-thin {
+  border-width: 0.125rem; }
+
+.border-normal {
+  border-width: 0.313rem; }
+
+.border-thick {
+  border-width: 0.625rem; }
+
+.border-double,
+.border.border-double {
+  border-width: 0.25rem; }
+
+.border, .border-top, .border-right, .border-bottom, .border-left {
+  border-color: #808080; }
+
+.border.line-color-lightest {
+  border-color: #f5f5f5; }
+
+.border.line-color-lighter {
+  border-color: #bfbfbf; }
+
+.border.line-color-light {
+  border-color: #737373; }
+
+.border.line-color-dark {
+  border-color: #595959; }
+
+.border.line-color-darker {
+  border-color: #4d4d4d; }
+
+.border.line-color-darkest {
+  border-color: #333333; }
+
+.border.line-color-black {
+  border-color: #000000; }
+
+.border.line-color-white {
+  border-color: #ffffff; }
+
+.border.line-color-gray {
+  border-color: #666666; }
+
+.border-zero {
+  border: 0; }
+
+.border-top-zero {
+  border-top: 0; }
+
+.border-right-zero {
+  border-right: 0; }
+
+.border-bottom-zero {
+  border-bottom: 0; }
+
+.border-left-zero {
+  border-left: 0; }
+
+.border-none {
+  border: none; }
+
+.border-top-none, .border-right-only, .border-bottom-only, .border-left-only {
+  border-top: 0; }
+
+.border-right-none, .border-top-only, .border-bottom-only, .border-left-only {
+  border-right: 0; }
+
+.border-bottom-none, .border-top-only, .border-right-only, .border-left-only {
+  border-bottom: 0; }
+
+.border-left-none, .border-top-only, .border-right-only, .border-bottom-only {
+  border-left: 0; }
+
 /* SETUP | TYPE | 2911_SETUP | FAMILY - 2019-04-16 */
 .fontfamily-body {
   font-family: "Source Sans Pro", sans-serif; }
@@ -1221,7 +1347,7 @@ a.button-red:hover {
 .fontfamily-quote {
   font-family: "Source Sans Pro", serif; }
 
-/* SETUP | TYPE | 2911_SETUP | SIZE - 2019-04-02 */
+/* SETUP | TYPE | 3020_SETUP | SIZE - 2019-07-23 */
 .fontsize-default {
   font-size: 1rem; }
 
@@ -1243,10 +1369,10 @@ a.button-red:hover {
 .fontsize-caption {
   font-size: 0.75; }
 
-.fontsize-tiniest, .content .wp-block-button.fontsize-tiniest .wp-block-button__link {
+.fontsize-tiniest, .entry-content p.has-tiniest-font-size, .content .wp-block-button.fontsize-tiniest .wp-block-button__link {
   font-size: 0.5rem; }
 
-.fontsize-tinier, .content .wp-block-button.fontsize-tinier .wp-block-button__link {
+.fontsize-tinier, .entry-content p.has-tinier-font-size, .content .wp-block-button.fontsize-tinier .wp-block-button__link {
   font-size: 0.625rem; }
 
 .fontsize-tiny, .entry-content p.has-tiny-font-size, .content .wp-block-button.fontsize-tiny .wp-block-button__link, .guide-label.fontsize-tiny, .guide-label2.fontsize-tiny {
@@ -1257,18 +1383,20 @@ a.button-red:hover {
   font-size: 0.875rem;
   line-height: 1.4; }
 
-.fontsize-xxsml, .entry-content p.has-xxsmall-font-size, .content .wp-block-button.fontsize-xxsml .wp-block-button__link {
+.fontsize-xxsml, .entry-content p.has-xxsmall-font-size, .content .wp-block-button.fontsize-xxsml .wp-block-button__link, .home.grid-archive .item-summary,
+.blog.grid-archive .item-summary,
+.archive.grid-archive .item-summary, .single-info .item-author {
   font-size: 1rem;
   line-height: 1.4; }
 
-.fontsize-xsml, .entry-content p.has-xsmall-font-size, .content .wp-block-button.fontsize-xsml .wp-block-button__link {
+.fontsize-xsml, .entry-content p.has-xsmall-font-size, .content .wp-block-button.fontsize-xsml .wp-block-button__link, .feature-related .item-title, .feature-next .item-title {
   font-size: 1.25rem;
   line-height: 1.4; }
   @media only screen and (max-width: 48rem) {
-    .fontsize-xsml, .entry-content p.has-xsmall-font-size, .content .wp-block-button.fontsize-xsml .wp-block-button__link {
+    .fontsize-xsml, .entry-content p.has-xsmall-font-size, .content .wp-block-button.fontsize-xsml .wp-block-button__link, .feature-related .item-title, .feature-next .item-title {
       font-size: 1.125rem; } }
   @media only screen and (max-width: 32rem) {
-    .fontsize-xsml, .entry-content p.has-xsmall-font-size, .content .wp-block-button.fontsize-xsml .wp-block-button__link {
+    .fontsize-xsml, .entry-content p.has-xsmall-font-size, .content .wp-block-button.fontsize-xsml .wp-block-button__link, .feature-related .item-title, .feature-next .item-title {
       font-size: 1rem; } }
 
 .wp-block-cover.fontsize-sml .wp-block-cover-text,
@@ -1284,16 +1412,16 @@ a.button-red:hover {
       font-size: 1.125rem; } }
 
 .wp-block-cover.fontsize-med .wp-block-cover-text,
-.site-container .wp-block-cover.fontsize-med .wp-block-cover-text, .fontsize-med, .entry-content p.has-medium-font-size, .content .wp-block-button.fontsize-med .wp-block-button__link {
+.site-container .wp-block-cover.fontsize-med .wp-block-cover-text, .fontsize-med, .entry-content p.has-medium-font-size, .content .wp-block-button.fontsize-med .wp-block-button__link, .single-info .item-title {
   font-size: 2.25rem;
   line-height: 1.4; }
   @media only screen and (max-width: 48rem) {
     .wp-block-cover.fontsize-med .wp-block-cover-text,
-    .site-container .wp-block-cover.fontsize-med .wp-block-cover-text, .fontsize-med, .entry-content p.has-medium-font-size, .content .wp-block-button.fontsize-med .wp-block-button__link {
+    .site-container .wp-block-cover.fontsize-med .wp-block-cover-text, .fontsize-med, .entry-content p.has-medium-font-size, .content .wp-block-button.fontsize-med .wp-block-button__link, .single-info .item-title {
       font-size: 1.5rem; } }
   @media only screen and (max-width: 32rem) {
     .wp-block-cover.fontsize-med .wp-block-cover-text,
-    .site-container .wp-block-cover.fontsize-med .wp-block-cover-text, .fontsize-med, .entry-content p.has-medium-font-size, .content .wp-block-button.fontsize-med .wp-block-button__link {
+    .site-container .wp-block-cover.fontsize-med .wp-block-cover-text, .fontsize-med, .entry-content p.has-medium-font-size, .content .wp-block-button.fontsize-med .wp-block-button__link, .single-info .item-title {
       font-size: 1.25rem; } }
 
 .wp-block-cover.fontsize-lrg .wp-block-cover-text,
@@ -1323,42 +1451,42 @@ a.button-red:hover {
       font-size: 2.125rem; } }
 
 .wp-block-cover.fontsize-xxlrg .wp-block-cover-text,
-.site-container .wp-block-cover.fontsize-xxlrg .wp-block-cover-text, .fontsize-xxlrg {
+.site-container .wp-block-cover.fontsize-xxlrg .wp-block-cover-text, .fontsize-xxlrg, .entry-content p.has-xxlarge-font-size {
   font-size: 5rem;
   line-height: 1.05; }
   @media only screen and (max-width: 48rem) {
     .wp-block-cover.fontsize-xxlrg .wp-block-cover-text,
-    .site-container .wp-block-cover.fontsize-xxlrg .wp-block-cover-text, .fontsize-xxlrg {
+    .site-container .wp-block-cover.fontsize-xxlrg .wp-block-cover-text, .fontsize-xxlrg, .entry-content p.has-xxlarge-font-size {
       font-size: 3.75rem; } }
   @media only screen and (max-width: 32rem) {
     .wp-block-cover.fontsize-xxlrg .wp-block-cover-text,
-    .site-container .wp-block-cover.fontsize-xxlrg .wp-block-cover-text, .fontsize-xxlrg {
+    .site-container .wp-block-cover.fontsize-xxlrg .wp-block-cover-text, .fontsize-xxlrg, .entry-content p.has-xxlarge-font-size {
       font-size: 3rem; } }
 
 .wp-block-cover.fontsize-xxxlrg .wp-block-cover-text,
-.site-container .wp-block-cover.fontsize-xxxlrg .wp-block-cover-text, .fontsize-xxxlrg {
+.site-container .wp-block-cover.fontsize-xxxlrg .wp-block-cover-text, .fontsize-xxxlrg, .entry-content p.has-xxxlarge-font-size {
   font-size: 6rem;
   line-height: 1.025; }
   @media only screen and (max-width: 48rem) {
     .wp-block-cover.fontsize-xxxlrg .wp-block-cover-text,
-    .site-container .wp-block-cover.fontsize-xxxlrg .wp-block-cover-text, .fontsize-xxxlrg {
+    .site-container .wp-block-cover.fontsize-xxxlrg .wp-block-cover-text, .fontsize-xxxlrg, .entry-content p.has-xxxlarge-font-size {
       font-size: 5rem; } }
   @media only screen and (max-width: 32rem) {
     .wp-block-cover.fontsize-xxxlrg .wp-block-cover-text,
-    .site-container .wp-block-cover.fontsize-xxxlrg .wp-block-cover-text, .fontsize-xxxlrg {
+    .site-container .wp-block-cover.fontsize-xxxlrg .wp-block-cover-text, .fontsize-xxxlrg, .entry-content p.has-xxxlarge-font-size {
       font-size: 3.75rem; } }
 
 .wp-block-cover.fontsize-huge .wp-block-cover-text,
-.site-container .wp-block-cover.fontsize-huge .wp-block-cover-text, .fontsize-huge, .content .wp-block-button.fontsize-huge .wp-block-button__link {
+.site-container .wp-block-cover.fontsize-huge .wp-block-cover-text, .fontsize-huge, .entry-content p.has-huge-font-size, .content .wp-block-button.fontsize-huge .wp-block-button__link {
   font-size: 8rem;
   line-height: 1; }
   @media only screen and (max-width: 48rem) {
     .wp-block-cover.fontsize-huge .wp-block-cover-text,
-    .site-container .wp-block-cover.fontsize-huge .wp-block-cover-text, .fontsize-huge, .content .wp-block-button.fontsize-huge .wp-block-button__link {
+    .site-container .wp-block-cover.fontsize-huge .wp-block-cover-text, .fontsize-huge, .entry-content p.has-huge-font-size, .content .wp-block-button.fontsize-huge .wp-block-button__link {
       font-size: 6rem; } }
   @media only screen and (max-width: 32rem) {
     .wp-block-cover.fontsize-huge .wp-block-cover-text,
-    .site-container .wp-block-cover.fontsize-huge .wp-block-cover-text, .fontsize-huge, .content .wp-block-button.fontsize-huge .wp-block-button__link {
+    .site-container .wp-block-cover.fontsize-huge .wp-block-cover-text, .fontsize-huge, .entry-content p.has-huge-font-size, .content .wp-block-button.fontsize-huge .wp-block-button__link {
       font-size: 5rem; } }
 
 /* SETUP | TYPE | 2911_SETUP | WEIGHT - 2019-04-02 */
@@ -1374,17 +1502,19 @@ a.button.fontweight-light.button-alt:hover, .fontweight-light {
 
 .button.fontweight-regular,
 .button.fontweight-regular.button-alt:hover,
-a.button.fontweight-regular.button-alt:hover, .fontweight-regular {
+a.button.fontweight-regular.button-alt:hover, .fontweight-regular, .home.grid-archive .item-summary,
+.blog.grid-archive .item-summary,
+.archive.grid-archive .item-summary, .feature-related .item-title {
   font-weight: 400; }
 
 .button.fontweight-semibold,
 .button.fontweight-semibold.button-alt:hover,
-a.button.fontweight-semibold.button-alt:hover, .fontweight-semibold {
+a.button.fontweight-semibold.button-alt:hover, .fontweight-semibold, .single-info .item-author {
   font-weight: 600; }
 
 .button.fontweight-bold,
 .button.fontweight-bold.button-alt:hover,
-a.button.fontweight-bold.button-alt:hover, .fontweight-bold {
+a.button.fontweight-bold.button-alt:hover, .fontweight-bold, .feature-next .item-title, .single-info .item-title {
   font-weight: 700; }
 
 .fontweight-black {
@@ -1445,7 +1575,7 @@ a.button.fontweight-bold.button-alt:hover, .fontweight-bold {
 .lineheight-onequarter {
   line-height: 1.25; }
 
-.lineheight-onefifth {
+.lineheight-onefifth, .feature-related .item-title, .feature-next .item-title, .single-info .item-title, .single-info .item-author {
   line-height: 1.2; }
 
 .lineheight-double {
@@ -2990,16 +3120,28 @@ th:first-child {
       margin-left: 1rem; } }
 
 /* SETUP | GRID | 2911_SETUP | GRID_GRID - 2019-05-24 */
-.grid-full, .grid-half, .grid-third, .grid-fourth, .grid-fifth, .grid-sixth, .grid-eight, .group.archive-grid, .group.archive-grid-video, .group.archive-grid-podcast {
+.grid-full, .grid-half, .grid-third, .grid-fourth, .grid-fifth, .grid-sixth, .grid-eight, .home.grid-archive .content,
+.blog.grid-archive .content,
+.archive.grid-archive .content, .home.grid-archive.grid-archive-2col .content,
+.blog.grid-archive.grid-archive-2col .content,
+.archive.grid-archive.grid-archive-2col .content, .grid-feature.grid-2col {
   display: grid; }
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .grid-full, .grid-half, .grid-third, .grid-fourth, .grid-fifth, .grid-sixth, .grid-eight, .group.archive-grid, .group.archive-grid-video, .group.archive-grid-podcast {
+    .grid-full, .grid-half, .grid-third, .grid-fourth, .grid-fifth, .grid-sixth, .grid-eight, .home.grid-archive .content,
+    .blog.grid-archive .content,
+    .archive.grid-archive .content, .home.grid-archive.grid-archive-2col .content,
+    .blog.grid-archive.grid-archive-2col .content,
+    .archive.grid-archive.grid-archive-2col .content, .grid-feature.grid-2col {
       display: flex;
       flex-wrap: wrap;
       margin-left: -1rem;
       margin-right: -1rem;
       width: calc(100% + 2rem); }
-      .grid-full::after, .grid-half::after, .grid-third::after, .grid-fourth::after, .grid-fifth::after, .grid-sixth::after, .grid-eight::after, .group.archive-grid::after, .group.archive-grid-video::after, .group.archive-grid-podcast::after {
+      .grid-full::after, .grid-half::after, .grid-third::after, .grid-fourth::after, .grid-fifth::after, .grid-sixth::after, .grid-eight::after, .home.grid-archive .content::after,
+      .blog.grid-archive .content::after,
+      .archive.grid-archive .content::after, .home.grid-archive.grid-archive-2col .content::after,
+      .blog.grid-archive.grid-archive-2col .content::after,
+      .archive.grid-archive.grid-archive-2col .content::after, .grid-feature.grid-2col::after {
         clear: both;
         content: "";
         display: block; } }
@@ -3011,16 +3153,28 @@ th:first-child {
 .grid-full {
   grid-template-columns: repeat(1, 1fr); }
 
-.grid-half {
+.grid-half, .home.grid-archive.grid-archive-2col .content,
+.blog.grid-archive.grid-archive-2col .content,
+.archive.grid-archive.grid-archive-2col .content, .grid-feature.grid-2col {
   grid-template-columns: repeat(2, 1fr); }
 
-.grid-half > .full {
+.grid-half > .full, .home.grid-archive.grid-archive-2col .content .archive-description,
+.blog.grid-archive.grid-archive-2col .content .archive-description,
+.archive.grid-archive.grid-archive-2col .content .archive-description, .home.grid-archive.grid-archive-2col .content .archive-pagination,
+.blog.grid-archive.grid-archive-2col .content .archive-pagination,
+.archive.grid-archive.grid-archive-2col .content .archive-pagination {
   grid-column: span 2; }
 
-.grid-third, .group.archive-grid, .group.archive-grid-video, .group.archive-grid-podcast {
+.grid-third, .home.grid-archive .content,
+.blog.grid-archive .content,
+.archive.grid-archive .content {
   grid-template-columns: repeat(3, 1fr); }
 
-.grid-third > .full {
+.grid-third > .full, .home.grid-archive .content .archive-description,
+.blog.grid-archive .content .archive-description,
+.archive.grid-archive .content .archive-description, .home.grid-archive .content .archive-pagination,
+.blog.grid-archive .content .archive-pagination,
+.archive.grid-archive .content .archive-pagination, .archive.grid-archive .entry.feature {
   grid-column: span 3; }
 
 .grid-third > .twothirds {
@@ -3613,11 +3767,19 @@ th:first-child {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem; }
 
-.group.archive-grid, .group.archive-grid-video, .group.archive-grid-podcast {
+.home.grid-archive .content,
+.blog.grid-archive .content,
+.archive.grid-archive .content, .home.grid-archive.grid-archive-2col .content,
+.blog.grid-archive.grid-archive-2col .content,
+.archive.grid-archive.grid-archive-2col .content, .grid-feature.grid-2col {
   grid-column-gap: 1.5rem;
   grid-row-gap: 1.5rem; }
   @media only screen and (max-width: 48rem) {
-    .group.archive-grid, .group.archive-grid-video, .group.archive-grid-podcast {
+    .home.grid-archive .content,
+    .blog.grid-archive .content,
+    .archive.grid-archive .content, .home.grid-archive.grid-archive-2col .content,
+    .blog.grid-archive.grid-archive-2col .content,
+    .archive.grid-archive.grid-archive-2col .content, .grid-feature.grid-2col {
       grid-column-gap: 1rem;
       grid-row-gap: 1rem; } }
 
@@ -4026,58 +4188,80 @@ th:first-child {
 /* SETUP | GENESIS | GENESIS-SAMPLE-291 | SITE-FOOTER - 2019-04-02 */
 /* Site Footer
 ---------------------------------------------------------------------------- */
-/* SETUP | HEADER | 2911_SETUP | HEADER-TOPDOWN-TYPE-STARTER_FLEX - 2019-05-10 */
+/* SETUP | MENU | 3020_SETUP | NAV - 2019-07-24 */
+/* SETUP | HEADER | 3020_SETUP | HEADER-LEFTRIGHT-LINE_FLEX - 2019-08-15 */
+/* Note: The width defined on the custom logo forces the title area to be limited */
 .site-header {
   background-color: #f0f0f0; }
 
 .site-header > .wrap {
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
+  justify-content: space-between; }
+  @media only screen and (max-width: 64rem) {
+    .site-header > .wrap {
+      justify-content: center;
+      flex-direction: column; } }
+
+.site-header > .wrap::before {
+  display: none; }
+
+.site-header > .wrap::after {
+  display: none; }
 
 .title-area {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (max-width: 64rem) {
+    .title-area {
+      justify-content: center;
+      flex-direction: column; } }
 
 .wp-custom-logo .title-area {
-  max-width: none !important;
+  max-width: 100% !important;
   padding-top: 0 !important; }
 
-.custom-logo,
-img.custom-logo {
+.custom-logo-link,
+a.custom-logo-link {
   max-width: 150px;
-  margin-bottom: 0.5rem; }
+  margin-right: 1rem; }
+  @media only screen and (max-width: 64rem) {
+    .custom-logo-link,
+    a.custom-logo-link {
+      margin-right: 0;
+      margin-bottom: 1rem; } }
 
 .site-title {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
   line-height: 1;
-  margin-bottom: 0; }
+  text-align: center;
+  margin-bottom: 0;
+  margin-right: 0.5rem; }
+  @media only screen and (max-width: 64rem) {
+    .site-title {
+      margin-right: 0; } }
 
 .header-image .site-title {
   color: transparent;
   margin-bottom: 0; }
 
 .site-description {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1;
+  text-align: center;
   margin-bottom: 0; }
 
-.nav-primary {
-  margin-top: 0.5rem; }
+@media only screen and (max-width: 64rem) {
+  .site-header .nav-primary {
+    margin-top: 1rem; } }
 
-.menu-primary {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  font-size: 1rem; }
-
-.menu-primary .menu-item {
-  margin-left: 0;
-  margin-right: 1rem; }
+@media only screen and (max-width: 64rem) {
+  .site-header .nav-primary #mega-menu-wrap-primary #mega-menu-primary {
+    text-align: center; } }
 
 /* SETUP | INNER | 2911_SETUP | INNER_GRID - 2019-04-02 */
 .site-inner {
@@ -4360,24 +4544,23 @@ img.custom-logo {
 .siteby a:hover {
   text-decoration: none; }
 
-/* SETUP | LOOP | 2911_SETUP | ENTRY - 2019-05-13 */
-.blog .entry {
-  margin-bottom: 2rem; }
+/* SETUP | LOOP | 3020_PROTOTYPE-NPR | ENTRY - 2019-08-08 */
+/* SETUP | LOOP | 3020_PROTOTYPE-NPR | ENTRYTITLE - 2019-08-08 */
+.entry-title a,
+.entry-title a:link, .module-mediaobject .item-title a,
+.module-mediaobject .item-title a:link {
+  color: #333; }
 
-.single .content .entry {
-  margin-bottom: 3rem; }
+.entry-title a:hover, .module-mediaobject .item-title a:hover {
+  color: #666; }
 
-.archive .entry {
-  background-color: #f9f9f9;
-  padding: 1.5rem;
-  margin-bottom: 2rem; }
+.single-video .entry-title {
+  margin-bottom: 0; }
 
-.featured-content .entry {
-  background-color: #f9f9f9;
-  padding: 1.5rem;
-  margin-bottom: 1rem; }
+.home .entry-title, .blog .entry-title, .archive .entry-title, .module-mediaobject .item-title {
+  font-size: 1.5rem;
+  font-weight: 700; }
 
-/* SETUP | LOOP | 2911_SETUP | ENTRYTITLE - 2019-04-02 */
 .featured-content .entry-title {
   font-size: 1.25rem;
   margin-bottom: 0.5rem; }
@@ -4552,6 +4735,40 @@ img.custom-logo {
   max-width: 48rem;
   width: 100%; }
 
+/* SETUP | MODULE | 3020_SETUP | MEDIAOBJECT - 2019-07-26 */
+.module-mediaobject, .module-mediaobject.module-sublevel .module-inner, .module-mediaobject.module-sublevel.module-reverse .module-inner, .module-mediaobject.module-horizontal, .module-mediaobject.module-sublevel.module-horizontal .module-inner, .module-mediaobject.module-sublevel.module-horizontal.module-reverse .module-inner {
+  display: flex; }
+
+.module-mediaobject.module-sublevel, .module-mediaobject.module-sublevel.module-reverse, .module-mediaobject.module-sublevel.module-vertical, .module-mediaobject.module-sublevel.module-vertical.module-reverse {
+  display: block; }
+
+.module-mediaobject.module-reverse, .module-mediaobject.module-sublevel.module-reverse .module-inner, .module-mediaobject.module-horizontal.module-reverse, .module-mediaobject.module-sublevel.module-horizontal.module-reverse .module-inner {
+  flex-direction: row-reverse; }
+
+.module-mediaobject.module-vertical, .module-mediaobject.module-sublevel.module-vertical .module-inner {
+  flex-direction: column; }
+
+.module-mediaobject.module-vertical.module-reverse, .module-mediaobject.module-sublevel.module-vertical.module-reverse .module-inner {
+  flex-direction: column-reverse; }
+
+.module-mediaobject, .module-mediaobject.module-horizontal {
+  align-items: flex-start; }
+
+.module-mediaobject .item-figure {
+  margin-right: 1rem;
+  margin-left: 0; }
+
+.module-mediaobject.module-reverse .item-figure {
+  margin-right: 0;
+  margin-left: 1rem; }
+
+.module-mediaobject.module-vertical .item-figure, .module-mediaobject.module-vertical.module-reverse .item-figure {
+  margin-right: 0;
+  margin-left: 0; }
+
+.module-mediaobject .item-info {
+  flex: 1; }
+
 /* SETUP | GENESIS | GENESIS-SAMPLE-291 | MEDIA-QUERIES - 2019-04-26 */
 /* Media Queries
 ---------------------------------------------------------------------------- */
@@ -4690,7 +4907,7 @@ img.custom-logo {
   ul {
     page-break-before: avoid; } }
 
-/* SETUP | GUTTENBERG | 2911_SETUP | TYPOGRAPHY - 2019-04-02 */
+/* SETUP | GUTTENBERG | 3020_SETUP | TYPOGRAPHY - 2019-07-23 */
 /* Drop Caps
 ---------------------------------------------------------------------------- */
 .entry-content p.has-drop-cap:not(:focus)::first-letter {
@@ -5081,15 +5298,33 @@ hr.wp-block-separator {
 
 /* Media Queries
 ---------------------------------------------------------------------------- */
-/* SETUP | MODULE | 3011_PROTOTYPE-NPR | ARCHIVE-GRID - 2019-06-25 */
-/* SETUP | MODULE | 3011_PROTOTYPE-NPR | MEDIAOBJECT - 2019-06-25 */
-.module-mediaobject, .module-mediaobject.module-sublevel .module-inner, .module-mediaobject.module-sublevel.module-reverse .module-inner {
+/* SETUP | MODULE | 3020_PROTOTYPE-NPR | GRID-ARCHIVE - 2019-08-09 */
+.home.grid-archive .content .entry-header,
+.blog.grid-archive .content .entry-header,
+.archive.grid-archive .content .entry-header {
+  margin-bottom: 0.5rem; }
+
+.home.grid-archive .content,
+.blog.grid-archive .content,
+.archive.grid-archive .content {
+  align-content: start;
+  align-items: start; }
+
+.home.grid-archive .entry.feature,
+.blog.grid-archive .entry.feature,
+.archive.grid-archive.grid-all .entry.feature {
+  grid-column: 1; }
+
+/* SETUP | MODULE | 3020_PROTOTYPE-NPR | GRID-ARCHIVE-2COL - 2019-08-09 */
+/* SETUP | ITEM | 3011_MODEL-COR | GRID-FEATURE - 2019-07-04 */
+/* SETUP | MODULE | 3020_PROTOTYPE-NPR | MEDIAOBJECT - 2019-08-16 */
+.module-mediaobject, .module-mediaobject.module-sublevel .module-inner, .module-mediaobject.module-sublevel.module-reverse .module-inner, .module-mediaobject.module-horizontal, .module-mediaobject.module-sublevel.module-horizontal .module-inner, .module-mediaobject.module-sublevel.module-horizontal.module-reverse .module-inner {
   display: flex; }
 
 .module-mediaobject.module-sublevel, .module-mediaobject.module-sublevel.module-reverse, .module-mediaobject.module-sublevel.module-vertical, .module-mediaobject.module-sublevel.module-vertical.module-reverse {
   display: block; }
 
-.module-mediaobject.module-reverse, .module-mediaobject.module-sublevel.module-reverse .module-inner {
+.module-mediaobject.module-reverse, .module-mediaobject.module-sublevel.module-reverse .module-inner, .module-mediaobject.module-horizontal.module-reverse, .module-mediaobject.module-sublevel.module-horizontal.module-reverse .module-inner {
   flex-direction: row-reverse; }
 
 .module-mediaobject.module-vertical, .module-mediaobject.module-sublevel.module-vertical .module-inner {
@@ -5098,7 +5333,7 @@ hr.wp-block-separator {
 .module-mediaobject.module-vertical.module-reverse, .module-mediaobject.module-sublevel.module-vertical.module-reverse .module-inner {
   flex-direction: column-reverse; }
 
-.module-mediaobject {
+.module-mediaobject, .module-mediaobject.module-horizontal {
   align-items: flex-start; }
 
 .module-mediaobject .item-figure {
@@ -5116,9 +5351,59 @@ hr.wp-block-separator {
 .module-mediaobject .item-info {
   flex: 1; }
 
-.group.archive-grid .module-mediaobject .item-info {
-  background-color: #000;
-  padding: 0.5rem 0.5rem 0.5rem 1rem; }
+.module-mediaobject.grid-2col .item-figure {
+  flex-basis: 50%; }
+
+.module-mediaobject.grid-2col .item-info {
+  flex-basis: 50%; }
+
+.module-mediaobject .item-title {
+  line-height: 1.2; }
+
+/* SETUP | ITEM | 3020_PROTOTYPE-NPR | FEATURE-ITEM - 2019-08-09 */
+.feature-pretitle {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  background-color: black;
+  padding: 4px 6px;
+  margin-bottom: 1rem;
+  color: white;
+  display: inline-block; }
+
+.feature-related .item-title a,
+.feature-related .item-title a:link {
+  color: #666; }
+
+.feature-related .item-title a:hover {
+  color: #999; }
+
+.feature-next {
+  padding: 1rem;
+  background-color: #f3f3f3; }
+
+.feature-next .feature-pretitle {
+  margin-bottom: 0; }
+
+.feature-next .item-title {
+  margin-top: 0.5rem; }
+
+.feature-next .item-title a,
+.feature-next .item-title a:link {
+  color: #666; }
+
+.feature-next .item-title a:hover {
+  color: #999; }
+
+/* SETUP | ITEM | 3020_PROTOTYPE-NPR | SINGLE-ITEM - 2019-08-09 */
+.single-info {
+  background-color: #f3f3f3;
+  padding: 1rem;
+  margin-bottom: 2rem; }
+
+.single-info .item-excerpt {
+  margin-top: 1rem; }
 
 /* SETUP | GUIDE | 2911_SETUP | LABEL - 2019-04-02 */
 .guide-label.indent, .guide-line.indent, .guide-summary.indent, .guide-box.indent {

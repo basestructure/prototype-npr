@@ -4,10 +4,10 @@
 	{
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
-		"uuidString": "98E13971-59DF-4C07-850F-DB6FC5DDF8BC"
+		"uuidString": "8FC55D43-4AB0-47CE-A351-8ED7EF9F8D26"
 		}
 	],
-"creatorBuild": "29156",
+"creatorBuild": "31491",
 "files": {
 	"/_themeinfo.scss": {
 		"aP": 0,
@@ -22,20 +22,28 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/archive-podcasts.php": {
+	"/archive-social.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/archive-podcasts.php",
+		"oAP": "/archive-social.php",
 		"oF": 0
 		},
-	"/archive-video.php": {
+	"/archive-social_180816.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/archive-video.php",
+		"oAP": "/archive-social_180816.php",
+		"oF": 0
+		},
+	"/archive.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/archive.php",
 		"oF": 0
 		},
 	"/CHANGELOG.txt": {
@@ -46,28 +54,20 @@
 		"oAP": "/CHANGELOG.txt",
 		"oF": 0
 		},
-	"/config/accessibility.php": {
+	"/config/appearance.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/config/accessibility.php",
+		"oAP": "/config/appearance.php",
 		"oF": 0
 		},
-	"/config/block-editor-settings.php": {
+	"/config/appearance_genesis-sample-301.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/config/block-editor-settings.php",
-		"oF": 0
-		},
-	"/config/child-theme-settings-genesis.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/config/child-theme-settings-genesis.php",
+		"oAP": "/config/appearance_genesis-sample-301.php",
 		"oF": 0
 		},
 	"/config/child-theme-settings.php": {
@@ -76,22 +76,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/config/child-theme-settings.php",
-		"oF": 0
-		},
-	"/config/custom-logo.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/config/custom-logo.php",
-		"oF": 0
-		},
-	"/config/html5.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/config/html5.php",
 		"oF": 0
 		},
 	"/config/import/content/about.php": {
@@ -178,14 +162,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/config/menus.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/config/menus.php",
-		"oF": 0
-		},
 	"/config/onboarding.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -194,12 +170,28 @@
 		"oAP": "/config/onboarding.php",
 		"oF": 0
 		},
+	"/config/responsive-menus.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/responsive-menus.php",
+		"oF": 0
+		},
 	"/config/simple-social-icons-settings.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/config/simple-social-icons-settings.php",
+		"oF": 0
+		},
+	"/config/theme-supports.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/theme-supports.php",
 		"oF": 0
 		},
 	"/CONTRIBUTING.txt": {
@@ -218,18 +210,13 @@
 		"oAP": "/functions.php",
 		"oF": 0
 		},
-	"/header/2911_prototype-starter/_header-topdown-type-starter_flex.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/header/2911_prototype-starter/_header-topdown-type-starter_flex.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
+	"/home.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/home.php",
+		"oF": 0
 		},
 	"/images/favicon.ico": {
 		"cB": 0,
@@ -239,50 +226,6 @@
 		"oAP": "/images/favicon.ico",
 		"oF": 0
 		},
-	"/js/genesis-sample.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/js/genesis-sample-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js/jquery.matchHeight.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/js/jquery.matchHeight.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js/responsive-menus.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/js/responsive-menus-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/js/responsive-menus.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/js/responsive-menus.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/languages/genesis-sample.pot": {
 		"cB": 0,
 		"ft": 8192,
@@ -290,6 +233,16 @@
 		"oA": 0,
 		"oAP": "/languages/genesis-sample.pot",
 		"oF": 0
+		},
+	"/lib/amp/amp.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/lib/amp/amp-min.css",
+		"oF": 1,
+		"oS": 3
 		},
 	"/lib/customize.php": {
 		"cB": 0,
@@ -299,33 +252,23 @@
 		"oAP": "/lib/customize.php",
 		"oF": 0
 		},
-	"/lib/gutenberg/front-end-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/lib/gutenberg/front-end-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/lib/gutenberg/front-end.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/lib/gutenberg/front-end-min.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 3
 		},
 	"/lib/gutenberg/init.php": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/lib/gutenberg/init.php",
-		"oF": 0
+		"oF": 1
 		},
 	"/lib/gutenberg/inline-styles.php": {
 		"cB": 0,
@@ -333,16 +276,16 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/lib/gutenberg/inline-styles.php",
-		"oF": 0
+		"oF": 1
 		},
 	"/lib/gutenberg/style-editor.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/lib/gutenberg/style-editor-min.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 3
 		},
 	"/lib/helper-functions.php": {
@@ -374,9 +317,9 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/lib/woocommerce/genesis-sample-woocommerce-min.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 3
 		},
 	"/lib/woocommerce/js/notice-update.js": {
@@ -384,9 +327,9 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/lib/woocommerce/js/notice-update-min.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 3,
 		"tS": 0
 		},
@@ -412,6 +355,126 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/lib/woocommerce/woocommerce-setup.php",
+		"oF": 0
+		},
+	"/lib/wpforms.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/lib/wpforms.php",
+		"oF": 0
+		},
+	"/loop/3020_prototype-npr/_entry.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/loop/3020_prototype-npr/_entry.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/loop/3020_prototype-npr/_entrytitle.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/loop/3020_prototype-npr/_entrytitle.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/module/3020_prototype-npr/_feature-item.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/module/3020_prototype-npr/_feature-item.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/module/3020_prototype-npr/_grid-archive-2col.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/module/3020_prototype-npr/_grid-archive-2col.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/module/3020_prototype-npr/_grid-archive.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/module/3020_prototype-npr/_grid-archive.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/module/3020_prototype-npr/_grid-feature.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/module/3020_prototype-npr/_grid-feature.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/module/3020_prototype-npr/_mediaobject.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/module/3020_prototype-npr/_mediaobject.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/module/3020_prototype-npr/_single-item.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/module/3020_prototype-npr/_single-item.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/page-templates/archive-dummy.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/page-templates/archive-dummy.php",
 		"oF": 0
 		},
 	"/page-templates/blocks.php": {
@@ -457,6 +520,14 @@
 		"oAP": "/single-podcast.php",
 		"oF": 0
 		},
+	"/single-social.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/single-social.php",
+		"oF": 0
+		},
 	"/single-video.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -488,18 +559,168 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/variables/2911_prototype-starter/_fontsize.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
+	"/swp_template/field list.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/field list.txt",
+		"oF": 0
+		},
+	"/swp_template/js/asset_archive_template.js": {
+		"bF": 0,
+		"ft": 64,
 		"ma": 0,
-		"oA": 1,
-		"oAP": "/variables/2911_prototype-starter/_fontsize.css",
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/swp_template/js/asset_archive_template-min.js",
 		"oF": 0,
-		"oS": 0,
-		"uL": 1
+		"sC": 3,
+		"tS": 0
+		},
+	"/swp_template/swp_query_entries.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/swp_query_entries.php",
+		"oF": 0
+		},
+	"/swp_template/swp_query_entries_npr_20190712.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/swp_query_entries_npr_20190712.php",
+		"oF": 0
+		},
+	"/swp_template/swp_query_entries_o.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/swp_query_entries_o.php",
+		"oF": 0
+		},
+	"/swp_template/swp_wp_query.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/swp_wp_query.php",
+		"oF": 0
+		},
+	"/swp_template/views/grid2col_mediaobject.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/grid2col_mediaobject.php",
+		"oF": 0
+		},
+	"/swp_template/views/media_relationships.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/media_relationships.php",
+		"oF": 0
+		},
+	"/swp_template/views/mediaobject-horizontal.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/mediaobject-horizontal.php",
+		"oF": 0
+		},
+	"/swp_template/views/mediaobject-next.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/mediaobject-next.php",
+		"oF": 0
+		},
+	"/swp_template/views/mediaobject-related.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/mediaobject-related.php",
+		"oF": 0
+		},
+	"/swp_template/views/mediaobject-social-ajax.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/mediaobject-social-ajax.php",
+		"oF": 0
+		},
+	"/swp_template/views/mediaobject-social.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/mediaobject-social.php",
+		"oF": 0
+		},
+	"/swp_template/views/mediaobject-vertical.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/mediaobject-vertical.php",
+		"oF": 0
+		},
+	"/swp_template/views/mediaobject_entry_video.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/mediaobject_entry_video.php",
+		"oF": 0
+		},
+	"/swp_template/views/mediaobject_grid_podcast.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/mediaobject_grid_podcast.php",
+		"oF": 0
+		},
+	"/swp_template/views/mediaobject_grid_video.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/mediaobject_grid_video.php",
+		"oF": 0
+		},
+	"/swp_template/views/sample_template.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/sample_template.php",
+		"oF": 0
+		},
+	"/swp_template/views/single_sample_template.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/swp_template/views/single_sample_template.php",
+		"oF": 0
+		},
+	"/taxonomy-social_type-instagram.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taxonomy-social_type-instagram.php",
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -507,14 +728,15 @@
 "manualImportLinks": {
 	},
 "projectAttributes": {
-	"creationDate": 566442202.44141805,
+	"creationDate": 584580046.83739805,
 	"displayValue": "prototype-npr",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "brackets_orange",
+	"iconImageName": "brackets_gray",
 	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
+	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
@@ -526,6 +748,7 @@
 	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
+	"babelExcludeString": "/\\/node_modules\\//, /\\/core-js\\//, /\\/bower_components\\//",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
@@ -665,6 +888,9 @@
 		"modules-umd": {
 			"active": 0
 			},
+		"named-capturing-groups-regex": {
+			"active": 0
+			},
 		"new-target": {
 			"active": 0
 			},
@@ -696,6 +922,9 @@
 			"active": 0
 			},
 		"parameters": {
+			"active": 0
+			},
+		"partial-application": {
 			"active": 0
 			},
 		"pipeline-operator": {
@@ -790,11 +1019,10 @@
 			}
 		},
 	"babelRetainLines": 0,
+	"babelUseBuiltInsType": 0,
 	"bowerAbbreviatedPath": "bower_components",
-	"bowerAutoCreateInfoFile": 1,
-	"bowerInstallDevDependencies": 0,
-	"bowerSaveDependencies": 1,
-	"bowerSaveDevDependencies": 0,
+	"bowerForceLatestOnConflict": 1,
+	"bowerTargetDependencyListType": 1,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
 	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
@@ -1113,7 +1341,7 @@
 			},
 		"id-match": {
 			"active": 0,
-			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true}"
+			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true, 'ignoreDestructuring': false}"
 			},
 		"implicit-arrow-linebreak": {
 			"active": 0,
@@ -1613,7 +1841,7 @@
 			},
 		"no-tabs": {
 			"active": 0,
-			"optionString": ""
+			"optionString": "{allowIndentationTabs: false}"
 			},
 		"no-template-curly-in-string": {
 			"active": 0,
@@ -1798,6 +2026,10 @@
 		"prefer-destructuring": {
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
+			},
+		"prefer-named-capture-group": {
+			"active": 0,
+			"optionString": ""
 			},
 		"prefer-numeric-literals": {
 			"active": 0,
@@ -2552,6 +2784,11 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"npmAbbreviatedPath": "",
+	"npmCreatePackageLock": 1,
+	"npmInstallOptionalDependencies": 0,
+	"npmSaveExactVersion": 0,
+	"npmTargetDependencyListType": 1,
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules",
@@ -2842,7 +3079,7 @@
 			"flagValue": -1
 			},
 		"unused": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"warnings": {

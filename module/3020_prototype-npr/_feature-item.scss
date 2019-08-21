@@ -1,0 +1,64 @@
+/* SETUP | ITEM | 3020_PROTOTYPE-NPR | FEATURE-ITEM - 2019-08-09 */
+
+// -------------------------------------
+// EXTEND
+
+
+// -------------------------------------
+// SELECTORS
+
+	// FEATURE-PRETITLE
+
+	.feature-pretitle {
+		font-size: 1rem;
+	    font-weight: 700;
+	    line-height: 1;
+	    text-transform: uppercase;
+	    background-color: black;
+	    padding: 4px 6px;
+	    margin-bottom: 1rem;
+	    color: white;
+	    display: inline-block;
+	}
+
+	// FEATURE-X
+	.feature-x {}
+
+	// FEATURE-RELATED
+	.feature-related {}
+
+	.feature-related .item-title {
+		@extend %fontsize-xsml !optional;			// 20px
+		@extend %fontweight-regular !optional;		// 500
+		@extend %lineheight-onefifth !optional; 	// 1.2
+	}
+	.feature-related .item-title a,
+	.feature-related .item-title a:link {
+		color: #666;
+	}
+	.feature-related .item-title a:hover {
+		color: #999;
+	}
+
+	// FEATURE-NEXT
+	.feature-next {
+		padding: 1rem;
+		background-color: #f3f3f3;
+	}
+	.feature-next .feature-pretitle {
+		margin-bottom: 0;
+	}
+
+	.feature-next .item-title {
+		@extend %fontsize-xsml !optional;			// 20px
+		@extend %fontweight-bold !optional;			// 500
+		@extend %lineheight-onefifth !optional; 	// 1.2
+		margin-top: 0.5rem;
+	}
+	.feature-next .item-title a,
+	.feature-next .item-title a:link {
+		color: #666;
+	}
+	.feature-next .item-title a:hover {
+		color: #999;
+	}

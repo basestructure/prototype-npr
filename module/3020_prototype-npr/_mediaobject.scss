@@ -1,5 +1,6 @@
-/* SETUP | MODULE | 3011_PROTOTYPE-NPR | MEDIAOBJECT - 2019-06-25 */
+/* SETUP | MODULE | 3020_PROTOTYPE-NPR | MEDIAOBJECT - 2019-08-16 */
 // SETUP | MODULE | 3011_SETUP | MEDIAOBJECT - 2019-06-21 */
+// Demo: https://setup.basestructure.com/module-mediaobject-reusability-demonstration/
 
 // -------------------------------------
 // EXTEND
@@ -53,12 +54,21 @@
 		//background-color: yellow;
 		flex: 1;
 	}
-	%mediaobject-iteminfo--archivegrid {
-		background-color: #000;
-		padding: 0.5rem 0.5rem 0.5rem 1rem;
+
+	// 2COLHALF
+	%mediaobject-2col-itemfigure {
+		flex-basis: 50%;
 	}
-	%mediaobject-iteminfo--archivegrid-video {}
-	%mediaobject-iteminfo--archivegrid-podcast {}
+	%mediaobject-2col-iteminfo {
+		flex-basis: 50%;
+	}
+
+	// ITEM-TITLE
+	%mediaobject-itemtitle {
+		line-height: 1.2;
+	}
+	%mediaobject-itemtitle-link {}
+	%mediaobject-itemtitle-hover {}
 
 
 
@@ -68,12 +78,20 @@
 	// MODULE-MEDIAOBJECT
 	.module-mediaobject {
 		@extend %mediaobject-flex !optional;
-		@extend %mediaobject-align-left2right !optional;
+		//@extend %mediaobject-align-left2right !optional;
 	}
+		.module-mediaobject.module-horizontal {
+			@extend %mediaobject-flex !optional;
+			@extend %mediaobject-align-left2right !optional;
+		}
 		// + REVERSE
 		.module-mediaobject.module-reverse {
 			@extend %mediaobject-flex-right2left !optional;
 		}
+		// + REVERSE
+		.module-mediaobject.module-horizontal.module-reverse {
+			@extend %mediaobject-flex-right2left !optional;
+		}		
 		// + VERTICAL
 		.module-mediaobject.module-vertical {
 			@extend %mediaobject-flex-top2bottom !optional;
@@ -90,11 +108,18 @@
 	.module-mediaobject.module-sublevel .module-inner {
 		@extend %mediaobject-flex !optional;
 	}
+		.module-mediaobject.module-sublevel.module-horizontal .module-inner {
+			@extend %mediaobject-flex !optional;
+		}
 		// + REVERSE
 		.module-mediaobject.module-sublevel.module-reverse {
 			@extend %mediaobject-flex-cancel !optional;
 		}
 		.module-mediaobject.module-sublevel.module-reverse .module-inner {
+			@extend %mediaobject-flex !optional;
+			@extend %mediaobject-flex-right2left !optional;
+		}
+		.module-mediaobject.module-sublevel.module-horizontal.module-reverse .module-inner {
 			@extend %mediaobject-flex !optional;
 			@extend %mediaobject-flex-right2left !optional;
 		}
@@ -130,12 +155,33 @@
 		.module-mediaobject.module-vertical.module-reverse .item-figure {
 			@extend %mediaobject-itemfigure-vertical !optional;
 		}
+		// + GRID-2COL (presumably half & half)
+		.module-mediaobject.grid-2col .item-figure {
+			@extend %mediaobject-2col-itemfigure !optional;
+		}
 
 	// ITEM-INFO
 	.module-mediaobject .item-info {
 		@extend %mediaobject-iteminfo !optional;
 	}
 
-	.group.archive-grid .module-mediaobject .item-info {
-		@extend %mediaobject-iteminfo--archivegrid !optional;
+		// + GRID-2COL (presumably half & half)
+		.module-mediaobject.grid-2col .item-info {
+			@extend %mediaobject-2col-iteminfo !optional;
+		}
+
+	// ITEM-TITLE
+
+	.module-mediaobject .item-title {
+		@extend %entrytitle--archive !optional;
+		@extend %mediaobject-itemtitle !optional;
+	}
+	.module-mediaobject .item-title a,
+	.module-mediaobject .item-title a:link {
+		@extend %entrytitle-link !optional;
+		@extend %mediaobject-itemtitle-link !optional;
+	}
+	.module-mediaobject .item-title a:hover {
+		@extend %entrytitle-hover !optional;
+		@extend %mediaobject-itemtitle-hover !optional;
 	}

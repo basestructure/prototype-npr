@@ -1,0 +1,89 @@
+/* SETUP | LOOP | 3020_PROTOTYPE-NPR | ENTRYTITLE - 2019-08-08 */
+
+// -------------------------------------
+// EXTEND
+
+// ENTRY-TITLE
+
+	%entrytitle {}
+	%entrytitle-link {
+		color: #333;
+	}
+	%entrytitle-hover {
+		color: #666;
+	}
+		%entrytitle--singlevideo {
+			margin-bottom: 0;
+		}
+		%entrytitle--archive {
+			font-size: #{$fontsize-sml}rem;
+			font-weight: 700;
+		}
+		%entrytitle--category {}
+		%entrytitle--tag {}
+		%entrytitle--featuredcontent {
+			font-size: #{$fontsize-xsml}rem;
+			margin-bottom: #{$space-sml}rem;
+		}
+		%entrytitle--featuredpost {}
+		%entrytitle--featuredpage {}
+
+	%entryheader-entrytitle {}
+
+	%entrycontent-entrytitle {}
+
+	%entryfooter-entrytitle {}
+
+
+// -------------------------------------
+// SELECTORS
+
+// ENTRY-TITLE
+
+	.entry-title {
+		@extend %entrytitle !optional;
+	}
+	.entry-title a,
+	.entry-title a:link {
+		@extend %entrytitle-link !optional;
+	}
+	.entry-title a:hover {
+		@extend %entrytitle-hover !optional;
+	}
+
+		.single-video .entry-title {
+			@extend %entrytitle--singlevideo !optional;
+		}
+
+		.home .entry-title,
+		.blog .entry-title,
+		.archive .entry-title {
+			@extend %entrytitle--archive !optional;
+		}
+		.category .entry-title {
+			@extend %entrytitle--category !optional;
+		}
+		.tag .entry-title {
+			@extend %entrytitle--tag !optional;
+		}
+		.featured-content .entry-title {
+			@extend %entrytitle--featuredcontent !optional;
+		}
+		.featured-post .entry-title {
+			@extend %entrytitle--featuredpost !optional;
+		}
+		.featured-page .entry-title {
+			@extend %entrytitle--featuredpage !optional;
+		}
+
+	.entry-header .entry-title {
+		@extend %entryheader-entrytitle !optional;
+	}
+
+	.entry-content .entry-title {
+		@extend %entrycontent-entrytitle !optional;
+	}
+
+	.entry-footer .entry-title {
+		@extend %entryfooter-entrytitle !optional;
+	}

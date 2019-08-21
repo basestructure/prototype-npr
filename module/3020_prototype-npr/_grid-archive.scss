@@ -1,0 +1,119 @@
+/* SETUP | MODULE | 3020_PROTOTYPE-NPR | GRID-ARCHIVE - 2019-08-09 */
+
+// -------------------------------------
+// EXTEND
+
+	// ENTRY-HEADER, ENTRY-CONTENT & ENTRY-FOOTER
+	%entryheader--gridarchive {
+		margin-bottom: 0.5rem;
+	}
+	%entrycontent--gridarchive {}
+	%entryfooter--gridarchive {}
+
+	// ARCHIVE COLUMNS
+	%content--gridarchive {
+		align-content: start;
+		align-items: start;
+	}
+
+	// ARCHIVE DESCRIPTION & PAGINATION
+	%archivedescription--gridarchive {}
+	%archivepagination--gridarchive {}
+
+	// ARCHIVE ENTRY
+	%entry--gridarchive {
+		padding: 0;
+		margin-bottom: 0;
+	}
+	%entry--gridarchivegridall {
+		grid-column: 1;
+	}
+
+	// ARCHIVE ENTRY
+	%entryfeature--gridarchive {}
+
+	// ITEM-SUMMARY
+	%itemsummary--gridarchive {
+		@extend %fontsize-xxsml !optional;
+		@extend %fontweight-regular !optional;
+		@extend %lineheight-med !optional; 	// 1.4
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// ENTRY-HEADER
+	.home.grid-archive .content .entry-header,
+	.blog.grid-archive .content .entry-header,
+	.archive.grid-archive .content .entry-header {
+		@extend %entryheader--gridarchive !optional;
+	}
+
+	// ENTRY-CONTENT
+	.home.grid-archive .content .entry-content,	
+	.blog.grid-archive .content .entry-content,
+	.archive.grid-archive .content .entry-content {}
+
+	// ENTRY-FOOTER
+	.home.grid-archive .content .entry-footer,
+	.blog.grid-archive .content .entry-footer,
+	.archive.grid-archive .content .entry-footer {}
+
+	// ARCHIVE COLUMNS
+	.home.grid-archive .content,
+	.blog.grid-archive .content,
+	.archive.grid-archive .content {
+		@extend %grid !optional;
+		@extend %gap-med !optional;
+		@extend %grid-third !optional;
+
+		@extend %content--gridarchive !optional;
+	}
+
+	
+	.home.grid-archive .content .archive-description,
+	.blog.grid-archive .content .archive-description,
+	.archive.grid-archive .content .archive-description {
+		@extend %archivedescription--archive-gridfeature !optional;
+
+		@extend %grid-third-full !optional;
+	}
+
+	.home.grid-archive .content .archive-pagination,
+	.blog.grid-archive .content .archive-pagination,
+	.archive.grid-archive .content .archive-pagination {
+		@extend %archivepagination--archive-gridfeature !optional;
+
+		@extend %grid-third-full !optional;
+	}
+
+	// ARCHIVE ENTRY
+	.home.grid-archive .entry,
+	.blog.grid-archive .entry,
+	.archive.grid-archive .entry {
+		@extend %entry--griddisplay !optional;
+	}
+
+	// ARCHIVE ENTRY
+	//.home.grid-archive .entry.feature,
+	//.blog.grid-archive .entry.feature,
+	.archive.grid-archive .entry.feature {
+		@extend %entryfeature--griddisplay !optional;
+
+		//@extend %grid-third-twothirds !optional;
+		@extend %grid-third-full !optional;
+	}
+	// HOME/BLOG ENTRY
+	.home.grid-archive .entry.feature,
+	.blog.grid-archive .entry.feature,
+	.archive.grid-archive.grid-all .entry.feature {
+
+		@extend %entry--gridarchivegridall !optional;
+	}
+
+	// ARCHIVE ITEM-SUMMARY
+	.home.grid-archive .item-summary,
+	.blog.grid-archive .item-summary,
+	.archive.grid-archive .item-summary {
+		@extend %itemsummary--gridarchive !optional;
+	}

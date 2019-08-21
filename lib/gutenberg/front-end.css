@@ -1,4 +1,3 @@
-/* SETUP | /LIB/GUTENBERG | 2911_SETUP | FRONT-END.CSS - 2019-04-02 */
 /* Drop Caps
 ---------------------------------------------------------------------------- */
 
@@ -91,9 +90,9 @@ h6.light {
 	width: 100%;
 }
 
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 600px) {
 
-	.wp-block-button.alignright {
+	.wp-block-button.home-contact {
 		float: left;
 		margin-left: 0;
 	}
@@ -118,7 +117,9 @@ h6.light {
 	width: 100vw;
 }
 
-.site-container .wp-block-cover .wp-block-cover-text {}
+.site-container .wp-block-cover .wp-block-cover-text {
+	font-size: 48px;
+}
 
 /* Buttons
 ---------------------------------------------------------------------------- */
@@ -387,31 +388,25 @@ hr.wp-block-separator {
 /* Media Queries
 ---------------------------------------------------------------------------- */
 
-@media only screen and (min-width: 600px) {
 
-	.entry .site-container .wp-block-columns {
-		flex-wrap: nowrap;
-	}
+@media only screen and (max-width: 781px) {
 
-	.entry .site-container .wp-block-columns[class*="has-"] > * {
-		margin-right: 36px;
+	.has-3-columns .wp-block-column,
+	.has-5-columns .wp-block-column {
+		flex-basis: 100%;
 		margin-left: 0;
-	}
-
-	.entry .site-container .wp-block-columns[class*="has-"] > *:last-child {
 		margin-right: 0;
 	}
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 960px) {
 
-	.entry .site-container .wp-block-columns .wp-block-column > *:first-child {
-		margin-top: 0;
-	}
-
-	.entry .site-container .wp-block-columns .wp-block-column > *:last-child {
-		margin-bottom: 0;
+	.full-width-content .site-container .alignwide {
+		margin-left: -180px;
+		margin-right: -180px;
+		max-width: calc(100% + 360px); /* 360 equals sum of left and right margin */
+		width: auto;
 	}
 
 }

@@ -1,0 +1,16 @@
+/* SETUP | ITEM | 3011_MODEL-COR | GRID-FEATURE - 2019-07-04 */
+
+// -------------------------------------
+// EXTEND
+
+
+// -------------------------------------
+// SELECTORS
+
+	// FEATURE-GRID2COL
+
+	.grid-feature.grid-2col {
+		@extend %grid !optional;
+		@extend %grid-half !optional;
+		@extend %gap-med !optional;	
+	}
